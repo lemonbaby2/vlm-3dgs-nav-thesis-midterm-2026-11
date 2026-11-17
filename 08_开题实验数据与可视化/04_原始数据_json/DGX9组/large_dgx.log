@@ -1,0 +1,47 @@
+[data] 24 frames 320 x 240 iters 250 points 8000
+[run] seed=0 mode=naive
+[init] points=8000 scale0=0.05
+[naive] it     1/250  loss 0.1019  psnr  14.01 dB  N=8000     4.6s
+[naive] it   150/250  loss 0.0375  psnr  19.31 dB  N=8000   334.7s
+[done] naive static 21.669 ghost 0.1344
+[run] seed=0 mode=dyn-mask
+[init] points=8000 scale0=0.05
+[dyn-mask] it     1/250  loss 0.0195  psnr  17.76 dB  N=8000     2.5s
+[dyn-mask] it   150/250  loss 0.0120  psnr  20.82 dB  N=8000   293.6s
+[done] dyn-mask static 30.08 ghost 0.0084
+[run] seed=0 mode=no-dyn-data
+[init] points=8000 scale0=0.05
+[no-dyn-data] it     1/250  loss 0.0441  psnr  17.79 dB  N=8000     2.7s
+[no-dyn-data] it   150/250  loss 0.0240  psnr  20.84 dB  N=8000   294.0s
+[done] no-dyn-data static 29.666 ghost 0.0133
+[run] seed=1 mode=naive
+[init] points=8000 scale0=0.05
+[naive] it     1/250  loss 0.0890  psnr  14.84 dB  N=8000     2.5s
+[naive] it   150/250  loss 0.0440  psnr  18.75 dB  N=8000   296.2s
+[done] naive static 22.021 ghost 0.1302
+[run] seed=1 mode=dyn-mask
+[init] points=8000 scale0=0.05
+[dyn-mask] it     1/250  loss 0.0325  psnr  18.32 dB  N=8000     2.8s
+[dyn-mask] it   150/250  loss 0.0088  psnr  21.55 dB  N=8000   329.1s
+[done] dyn-mask static 30.036 ghost 0.0084
+[run] seed=1 mode=no-dyn-data
+[init] points=8000 scale0=0.05
+[no-dyn-data] it     1/250  loss 0.0432  psnr  18.33 dB  N=8000     2.7s
+[no-dyn-data] it   150/250  loss 0.0210  psnr  21.72 dB  N=8000   328.7s
+[done] no-dyn-data static 29.418 ghost 0.0146
+[run] seed=2 mode=naive
+[init] points=8000 scale0=0.05
+[naive] it     1/250  loss 0.0879  psnr  14.81 dB  N=8000     2.9s
+[naive] it   150/250  loss 0.0345  psnr  19.66 dB  N=8000   333.3s
+[done] naive static 21.769 ghost 0.1358
+[run] seed=2 mode=dyn-mask
+[init] points=8000 scale0=0.05
+[dyn-mask] it     1/250  loss 0.0272  psnr  19.12 dB  N=8000     2.9s
+[dyn-mask] it   150/250  loss 0.0154  psnr  20.68 dB  N=8000   333.8s
+[done] dyn-mask static 30.097 ghost 0.0077
+[run] seed=2 mode=no-dyn-data
+[init] points=8000 scale0=0.05
+[no-dyn-data] it     1/250  loss 0.0385  psnr  19.13 dB  N=8000     2.8s
+[no-dyn-data] it   150/250  loss 0.0261  psnr  20.68 dB  N=8000   334.7s
+[done] no-dyn-data static 29.65 ghost 0.0139
+[ALL DONE] 11830.1 sec checks {'C1_static_B>A': True, 'C2_ghost_B_lowest': True, 'C3_ghost_10x': True}

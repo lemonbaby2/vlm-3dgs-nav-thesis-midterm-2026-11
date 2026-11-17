@@ -1,0 +1,126 @@
+{
+  "agg": {
+    "psnr_all_mean": 21.124,
+    "psnr_static_mean": 34.525,
+    "psnr_dyn_mean": 8.3,
+    "ssim_mean": 0.9186,
+    "ghost_residual_mean": 0.005,
+    "train_time_s": 845.45,
+    "n_gauss": 5000,
+    "mode": "dyn-mask",
+    "seed": 1,
+    "device": "NVIDIA GeForce RTX 4060",
+    "iters": 2500,
+    "init_points": 5000
+  },
+  "per_frame": [
+    {
+      "frame": 0,
+      "psnr_all": 23.271,
+      "psnr_static": 33.0,
+      "psnr_dyn": 8.163,
+      "ssim": 0.9325,
+      "ghost_residual": 0.0042,
+      "dyn_ratio": 0.0277
+    },
+    {
+      "frame": 1,
+      "psnr_all": 22.531,
+      "psnr_static": 34.834,
+      "psnr_dyn": 7.959,
+      "ssim": 0.9331,
+      "ghost_residual": 0.0047,
+      "dyn_ratio": 0.0329
+    },
+    {
+      "frame": 2,
+      "psnr_all": 21.874,
+      "psnr_static": 31.394,
+      "psnr_dyn": 7.98,
+      "ssim": 0.9277,
+      "ghost_residual": 0.0028,
+      "dyn_ratio": 0.0364
+    },
+    {
+      "frame": 3,
+      "psnr_all": 22.105,
+      "psnr_static": 33.965,
+      "psnr_dyn": 8.245,
+      "ssim": 0.9266,
+      "ghost_residual": 0.0033,
+      "dyn_ratio": 0.0385
+    },
+    {
+      "frame": 4,
+      "psnr_all": 22.283,
+      "psnr_static": 34.269,
+      "psnr_dyn": 8.598,
+      "ssim": 0.9271,
+      "ghost_residual": 0.0042,
+      "dyn_ratio": 0.0402
+    },
+    {
+      "frame": 5,
+      "psnr_all": 22.032,
+      "psnr_static": 31.98,
+      "psnr_dyn": 8.806,
+      "ssim": 0.9265,
+      "ghost_residual": 0.0051,
+      "dyn_ratio": 0.043
+    },
+    {
+      "frame": 6,
+      "psnr_all": 21.498,
+      "psnr_static": 30.469,
+      "psnr_dyn": 8.799,
+      "ssim": 0.9211,
+      "ghost_residual": 0.0067,
+      "dyn_ratio": 0.0472
+    },
+    {
+      "frame": 7,
+      "psnr_all": 21.272,
+      "psnr_static": 33.289,
+      "psnr_dyn": 8.479,
+      "ssim": 0.9186,
+      "ghost_residual": 0.0075,
+      "dyn_ratio": 0.0494
+    },
+    {
+      "frame": 8,
+      "psnr_all": 20.182,
+      "psnr_static": 36.546,
+      "psnr_dyn": 8.089,
+      "ssim": 0.908,
+      "ghost_residual": 0.0066,
+      "dyn_ratio": 0.0604
+    },
+    {
+      "frame": 9,
+      "psnr_all": 19.137,
+      "psnr_static": 37.673,
+      "psnr_dyn": 8.037,
+      "ssim": 0.8961,
+      "ghost_residual": 0.0054,
+      "dyn_ratio": 0.0766
+    },
+    {
+      "frame": 10,
+      "psnr_all": 18.339,
+      "psnr_static": 38.96,
+      "psnr_dyn": 8.169,
+      "ssim": 0.8926,
+      "ghost_residual": 0.0037,
+      "dyn_ratio": 0.0954
+    },
+    {
+      "frame": 11,
+      "psnr_all": 18.966,
+      "psnr_static": 37.926,
+      "psnr_dyn": 8.276,
+      "ssim": 0.9137,
+      "ghost_residual": 0.0055,
+      "dyn_ratio": 0.0843
+    }
+  ]
+}
