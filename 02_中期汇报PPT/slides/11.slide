@@ -1,0 +1,88 @@
+<Slide style={{ width: 1280, height: 720, backgroundColor: '#FFFFFF', fontFamily: 'Microsoft YaHei', padding: 0, flexDirection: 'column' }}>
+
+  <Box style={{ width: 1280, height: 72, background: '#1E4FA8', paddingLeft: 60, paddingRight: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+      <Box style={{ width: 8, height: 36, background: '#3D7BD9' }} />
+      <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#FFFFFF' }}>内容二：尺度感知跟踪与动态感知高斯映射</Text>
+    </Box>
+    <Text style={{ fontSize: 16, color: '#B9CCEA' }}>02 · Method 02</Text>
+  </Box>
+
+  <Box style={{ width: 1280, height: 598, paddingLeft: 60, paddingRight: 60, paddingTop: 28, flexDirection: 'column' }}>
+
+    <Box style={{ flexDirection: 'row', gap: 32, height: 478 }}>
+
+      <Box style={{ flex: 1, flexDirection: 'column', padding: '22px 24px', border: '1px solid #D6DCE5', borderTop: '3px solid #1E4FA8' }}>
+        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1A2230', marginBottom: 6 }}>尺度感知联合优化</Text>
+        <Text style={{ fontSize: 15, color: '#8B97A8', marginBottom: 16 }}>解决单目尺度歧义</Text>
+
+        <Text style={{ fontSize: 17, color: '#4A5568', lineHeight: 1.6, marginBottom: 14 }}>
+          <span style={{ fontWeight: 'bold', color: '#1A2230' }}>问题　</span>纯单目没有基线，重建只在相似变换意义下成立，尺度不可观。
+        </Text>
+
+        <Box style={{ padding: '12px 16px', background: '#F7F9FC', borderLeft: '3px solid #3D7BD9', marginBottom: 14 }}>
+          <Text style={{ fontSize: 16, color: '#1A2230', lineHeight: 1.75 }}>
+            min<sub>T, s</sub>　Σ　ρ( ‖ π(s·X) − u ‖²<sub>Σ</sub> ) · w<sub>dyn</sub>
+          </Text>
+          <Text style={{ fontSize: 14, color: '#8B97A8', marginTop: 8, lineHeight: 1.5 }}>
+            w_dyn = 1 − P(d|e)：动态后验越低，该点对位姿的贡献越大
+          </Text>
+        </Box>
+
+        <Text style={{ fontSize: 17, color: '#4A5568', lineHeight: 1.6 }}>
+          <span style={{ fontWeight: 'bold', color: '#1A2230' }}>做法　</span>把尺度因子 s 作为与 SE(3) 位姿同等的优化变量放进同一目标函数，不再事后用中位数补尺度。
+        </Text>
+
+        <Box style={{ marginTop: 'auto', paddingTop: 14, borderTop: '1px solid #D6DCE5' }}>
+          <Text style={{ fontSize: 16, color: '#1E4FA8', fontWeight: 'bold', lineHeight: 1.5 }}>
+            结果：无需 IMU 或双目，输出度量尺度轨迹
+          </Text>
+        </Box>
+      </Box>
+
+      <Box style={{ flex: 1, flexDirection: 'column', padding: '22px 24px', border: '1px solid #D6DCE5', borderTop: '3px solid #1E4FA8' }}>
+        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1A2230', marginBottom: 6 }}>动态感知高斯映射</Text>
+        <Text style={{ fontSize: 15, color: '#8B97A8', marginBottom: 16 }}>解决动态物体污染地图</Text>
+
+        <Text style={{ fontSize: 17, color: '#4A5568', lineHeight: 1.6, marginBottom: 14 }}>
+          <span style={{ fontWeight: 'bold', color: '#1A2230' }}>问题　</span>动态物体一旦被写成高斯基元，后续优化很难再"洗掉"，只会留下拖影。
+        </Text>
+
+        <Box style={{ flexDirection: 'column', gap: 16 }}>
+          <Box style={{ flexDirection: 'column' }}>
+            <Text style={{ fontSize: 17, color: '#1A2230', fontWeight: 'bold', marginBottom: 5 }}>① 掩码加权渲染损失</Text>
+            <Text style={{ fontSize: 17, color: '#4A5568', lineHeight: 1.55 }}>动态像素不进入光度误差，渲染损失只在静态区域回传梯度。</Text>
+          </Box>
+          <Box style={{ flexDirection: 'column' }}>
+            <Text style={{ fontSize: 17, color: '#1A2230', fontWeight: 'bold', marginBottom: 5 }}>② 初始化滤波</Text>
+            <Text style={{ fontSize: 17, color: '#4A5568', lineHeight: 1.55 }}>只有位姿稳定且跨视图一致的点才允许生成基元，从源头挡掉瞬时结构。</Text>
+          </Box>
+          <Box style={{ flexDirection: 'column' }}>
+            <Text style={{ fontSize: 17, color: '#1A2230', fontWeight: 'bold', marginBottom: 5 }}>③ 生命周期管理</Text>
+            <Text style={{ fontSize: 17, color: '#4A5568', lineHeight: 1.55 }}>不透明度低于阈值的基元剪枝，梯度大的分裂致密化。</Text>
+          </Box>
+        </Box>
+
+        <Box style={{ marginTop: 'auto', paddingTop: 14, borderTop: '1px solid #D6DCE5' }}>
+          <Text style={{ fontSize: 16, color: '#1E4FA8', fontWeight: 'bold', lineHeight: 1.5 }}>
+            结果：地图不留拖影，PSNR 与 SSIM 同步提升
+          </Text>
+        </Box>
+      </Box>
+
+    </Box>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', marginTop: 16, padding: '12px 24px', background: '#E8EFF8', height: 70 }}>
+      <Text style={{ fontSize: 17, color: '#1A2230', lineHeight: 1.55 }}>
+        <span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>架构上的关键决定　</span>跟踪与建图分离：前端只负责位姿与尺度，后端只负责地图质量。消融结果显示，去掉尺度感知只伤 ATE，去掉生命周期管理只伤 PSNR，互不牵连。
+      </Text>
+    </Box>
+
+  </Box>
+
+  <Box style={{ width: 1280, height: 50, paddingLeft: 60, paddingRight: 60, paddingTop: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>动态环境下视觉语言模型辅助三维高斯语义建图与机器人目标导航</Text>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>11 / 26</Text>
+  </Box>
+
+</Slide>

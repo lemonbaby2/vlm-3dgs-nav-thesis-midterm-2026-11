@@ -1,0 +1,13 @@
+<Slide style={{ width: 1280, height: 720, backgroundColor: '#FFFFFF', fontFamily: 'Microsoft YaHei', padding: 0 }}>
+  <Box style={{ width: 1280, height: 720, paddingLeft: 120, paddingRight: 120, flexDirection: 'row', alignItems: 'center', gap: 72 }}>
+    <Text style={{ fontSize: 176, fontWeight: 'bold', color: '#C9D9F0', lineHeight: 1, width: 250 }}>04</Text>
+    <Box style={{ width: 2, height: 168, background: '#1E4FA8' }} />
+    <Box style={{ flexDirection: 'column', width: 620 }}>
+      <Text style={{ fontSize: 38, fontWeight: 'bold', color: '#1A2230', lineHeight: 1.25 }}>存在问题与下阶段计划</Text>
+      <Text style={{ fontSize: 15, color: '#8B97A8', letterSpacing: 2, marginTop: 14 }}>LIMITATIONS AND NEXT STEPS</Text>
+      <Text style={{ fontSize: 18, color: '#4A5568', marginTop: 26, lineHeight: 1.65 }}>
+        三个尚未解决的问题，各自的量化边界，以及 2027 至 2028 年的四个时间节点。
+      </Text>
+    </Box>
+  </Box>
+</Slide>

@@ -1,0 +1,57 @@
+<Slide style={{ width: 1280, height: 720, backgroundColor: '#FFFFFF', fontFamily: 'Microsoft YaHei', padding: 0, flexDirection: 'column' }}>
+
+  <Box style={{ width: 1280, height: 72, background: '#1E4FA8', paddingLeft: 60, paddingRight: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+      <Box style={{ width: 8, height: 36, background: '#3D7BD9' }} />
+      <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#FFFFFF' }}>动态环境让静态世界假设失效</Text>
+    </Box>
+    <Text style={{ fontSize: 16, color: '#B9CCEA' }}>01 · Background</Text>
+  </Box>
+
+  <Box style={{ width: 1280, height: 598, paddingLeft: 60, paddingRight: 60, paddingTop: 28, flexDirection: 'column' }}>
+
+    <Box style={{ flexDirection: 'column', padding: '20px 24px', background: '#E8EFF8', borderLeft: '4px solid #1E4FA8' }}>
+      <Text style={{ fontSize: 15, color: '#1E4FA8', fontWeight: 'bold', letterSpacing: 2, marginBottom: 10 }}>核心问题</Text>
+      <Text style={{ fontSize: 19, color: '#1A2230', lineHeight: 1.6 }}>
+        当场景中存在运动物体、且仅有单目 RGB 输入时，能否在<span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>不依赖语义先验</span>的条件下得到干净的几何地图与开放词汇查询能力，并让这两者直接服务于机器人的目标导航？
+      </Text>
+    </Box>
+
+    <Box style={{ flexDirection: 'row', gap: 24, height: 330, marginTop: 28 }}>
+      <Box style={{ flex: 1, flexDirection: 'column', padding: '22px 22px', border: '1px solid #D6DCE5' }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E4FA8', marginBottom: 14 }}>Ⅰ</Text>
+        <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#1A2230', lineHeight: 1.25, marginBottom: 16 }}>动态物体污染地图</Text>
+        <Text style={{ fontSize: 18, color: '#4A5568', lineHeight: 1.6 }}>
+          静态世界假设下行人被当作固定结构写入地图，产生拖影；位姿优化同时被动态外点拉偏。TUM fr3/walking 上 ORB-SLAM3 的 ATE 达 <span style={{ fontWeight: 'bold', color: '#D9534F' }}>0.562 m</span>，已不可用于导航。
+        </Text>
+      </Box>
+      <Box style={{ flex: 1, flexDirection: 'column', padding: '22px 22px', border: '1px solid #D6DCE5' }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E4FA8', marginBottom: 14 }}>Ⅱ</Text>
+        <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#1A2230', lineHeight: 1.25, marginBottom: 16 }}>单目尺度歧义</Text>
+        <Text style={{ fontSize: 18, color: '#4A5568', lineHeight: 1.6 }}>
+          没有惯导或双目基线，重建只在相似变换意义下成立。而"走到货架前 1.5 米"这类目标导航指令要求度量尺度，尺度误差会直接放大为停靠误差。
+        </Text>
+      </Box>
+      <Box style={{ flex: 1, flexDirection: 'column', padding: '22px 22px', border: '1px solid #D6DCE5' }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E4FA8', marginBottom: 14 }}>Ⅲ</Text>
+        <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#1A2230', lineHeight: 1.25, marginBottom: 16 }}>语义与几何两套表征</Text>
+        <Text style={{ fontSize: 18, color: '#4A5568', lineHeight: 1.6 }}>
+          开放词汇查询依赖视觉语言特征场，几何重建依赖高斯图元。两者不共享同一空间索引，导航层必须在两个结构之间来回转换，代价高且易失配。
+        </Text>
+      </Box>
+    </Box>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', marginTop: 24, padding: '12px 24px', background: '#E8EFF8', height: 46 }}>
+      <Text style={{ fontSize: 18, color: '#1A2230' }}>
+        本课题的做法：把<span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>动态掩码 — 语义高斯 — 目标导航</span>做成共享同一基元表示的通路，而非三个独立模块的拼接。
+      </Text>
+    </Box>
+
+  </Box>
+
+  <Box style={{ width: 1280, height: 50, paddingLeft: 60, paddingRight: 60, paddingTop: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>动态环境下视觉语言模型辅助三维高斯语义建图与机器人目标导航</Text>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>4 / 26</Text>
+  </Box>
+
+</Slide>

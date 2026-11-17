@@ -1,0 +1,54 @@
+<Slide style={{ width: 1280, height: 720, backgroundColor: '#FFFFFF', fontFamily: 'Microsoft YaHei', padding: 0, flexDirection: 'column' }}>
+
+  <Box style={{ width: 1280, height: 72, background: '#1E4FA8', paddingLeft: 60, paddingRight: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+      <Box style={{ width: 8, height: 36, background: '#3D7BD9' }} />
+      <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#FFFFFF' }}>跨规模复核：数据放大后收益反而更大</Text>
+    </Box>
+    <Text style={{ fontSize: 16, color: '#B9CCEA' }}>03 · Reproduction</Text>
+  </Box>
+
+  <Box style={{ width: 1280, height: 598, paddingLeft: 60, paddingRight: 60, paddingTop: 22, flexDirection: 'column' }}>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 24 }}>
+      <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#1A2230' }}>图 5　两种数据规模下的静态区 PSNR 与动态残影</Text>
+      <Text style={{ fontSize: 13, color: '#8B97A8' }}>DGX spark-a8d2 GB10 · 3 种子 × 3 配置 × 250 iter · 24 帧 320×240×8000 点 · 总耗时 197 分钟</Text>
+    </Box>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', height: 352, marginTop: 6 }}>
+      <Image src="assets/fig_cross_scale.png" style={{ width: 1086, height: 352, objectFit: 'contain' }} />
+    </Box>
+
+    <Box style={{ flexDirection: 'row', gap: 14, marginTop: 10, height: 92 }}>
+
+      <Box style={{ flex: 1, flexDirection: 'column', padding: '8px 18px', background: '#EDF3FB', borderLeft: '4px solid #1E4FA8' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1E4FA8' }}>为什么放大后收益更大</Text>
+        <Text style={{ fontSize: 13.5, color: '#4A5568', lineHeight: 1.4, marginTop: 5 }}>
+          放大场景更难：<span style={{ fontWeight: 'bold', color: '#1A2230' }}>静态区基线 21.82 dB</span>（小场景 30.90），欠拟合更严重；残影基数 0.1335（小场景 0.080），可降空间更大。
+        </Text>
+      </Box>
+
+      <Box style={{ flex: 1, flexDirection: 'column', padding: '8px 18px', background: '#F2F8F4', borderLeft: '4px solid #2E8B57' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#2E8B57' }}>与双卡结果的一致性</Text>
+        <Text style={{ fontSize: 13.5, color: '#4A5568', lineHeight: 1.4, marginTop: 5 }}>
+          排序完全一致：静态区 <span style={{ fontWeight: 'bold', color: '#1A2230' }}>B &gt; C &gt; A</span>，残影 <span style={{ fontWeight: 'bold', color: '#1A2230' }}>B &lt; C &lt; A</span>；残影降幅同为 16.3 倍。
+        </Text>
+      </Box>
+
+    </Box>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', marginTop: 10, padding: '10px 22px', background: '#E8EFF8', height: 76 }}>
+      <Text style={{ fontSize: 15, color: '#1A2230', lineHeight: 1.45 }}>
+        <span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>结论　</span>收益不是小数据欠拟合的产物：数据规模放大 4 倍后，静态区提升从 <span style={{ fontWeight: 'bold' }}>+3.52 dB</span> 变成 <span style={{ fontWeight: 'bold' }}>+8.25 dB</span>，残影降幅稳定在 <span style={{ fontWeight: 'bold' }}>16 倍</span>。<br />
+        <span style={{ fontWeight: 'bold', color: '#C0392B' }}>如实披露　</span>「仅初始化滤波的残影 &gt; B 的 5 倍」这一判定在放大版不成立（实测 1.70 倍，小数据版 14.7 倍）——点数增至 8000 后初始化滤波本身已足够密，掩码加权的<span style={{ fontWeight: 'bold' }}>增量</span>优势被压缩。
+      </Text>
+    </Box>
+
+  </Box>
+
+  <Box style={{ width: 1280, height: 50, paddingLeft: 60, paddingRight: 60, paddingTop: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>动态环境下视觉语言模型辅助三维高斯语义建图与机器人目标导航</Text>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>19 / 26</Text>
+  </Box>
+
+</Slide>

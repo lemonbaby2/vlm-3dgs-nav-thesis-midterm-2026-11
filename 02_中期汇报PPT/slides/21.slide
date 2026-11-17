@@ -1,0 +1,66 @@
+<Slide style={{ width: 1280, height: 720, backgroundColor: '#FFFFFF', fontFamily: 'Microsoft YaHei', padding: 0, flexDirection: 'column' }}>
+
+  <Box style={{ width: 1280, height: 72, background: '#1E4FA8', paddingLeft: 60, paddingRight: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+      <Box style={{ width: 8, height: 36, background: '#3D7BD9' }} />
+      <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#FFFFFF' }}>阶段性成果</Text>
+    </Box>
+    <Text style={{ fontSize: 16, color: '#B9CCEA' }}>03 · Outcomes</Text>
+  </Box>
+
+  <Box style={{ width: 1280, height: 598, paddingLeft: 60, paddingRight: 60, paddingTop: 28, flexDirection: 'column' }}>
+
+    <Box style={{ flexDirection: 'column', height: 480 }}>
+
+      <Box style={{ flexDirection: 'row', alignItems: 'center', height: 112, borderBottom: '1px solid #D6DCE5' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1E4FA8', letterSpacing: 1, width: 116 }}>学术论文</Text>
+        <Box style={{ flex: 1, flexDirection: 'column', paddingRight: 32 }}>
+          <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1A2230', lineHeight: 1.35 }}>Dy3DGS-SLAM: Monocular 3D Gaussian Splatting SLAM for Dynamic Environments</Text>
+          <Text style={{ fontSize: 16, color: '#4A5568', marginTop: 8, lineHeight: 1.45 }}>第一作者　已投 IEEE TPAMI，目前在审；预印本 arXiv:2506.05965</Text>
+        </Box>
+        <Text style={{ fontSize: 16, color: '#1E4FA8', fontWeight: 'bold', width: 108, textAlign: 'right' }}>在审</Text>
+      </Box>
+
+      <Box style={{ flexDirection: 'row', alignItems: 'center', height: 112, borderBottom: '1px solid #D6DCE5' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1E4FA8', letterSpacing: 1, width: 116 }}>发明专利</Text>
+        <Box style={{ flex: 1, flexDirection: 'column', paddingRight: 32 }}>
+          <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1A2230', lineHeight: 1.35 }}>基于多模态感知与高斯原语的地图构建方法、装置及介质</Text>
+          <Text style={{ fontSize: 16, color: '#4A5568', marginTop: 8, lineHeight: 1.45 }}>主要发明人　申请号 2026105158118，已进入实质审查阶段</Text>
+        </Box>
+        <Text style={{ fontSize: 16, color: '#1E4FA8', fontWeight: 'bold', width: 108, textAlign: 'right' }}>实质审查</Text>
+      </Box>
+
+      <Box style={{ flexDirection: 'row', alignItems: 'center', height: 112, borderBottom: '1px solid #D6DCE5' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1E4FA8', letterSpacing: 1, width: 116 }}>工程方案</Text>
+        <Box style={{ flex: 1, flexDirection: 'column', paddingRight: 32 }}>
+          <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1A2230', lineHeight: 1.35 }}>四足机器人大地图与多楼层导航栈升级方案</Text>
+          <Text style={{ fontSize: 16, color: '#4A5568', marginTop: 8, lineHeight: 1.45 }}>企业合作项目　覆盖建图实时存储、地图按需加载、多楼层组织等六个主题；方案完成，按需加载与多楼层前端已部分实现</Text>
+        </Box>
+        <Text style={{ fontSize: 16, color: '#4A5568', fontWeight: 'bold', width: 108, textAlign: 'right' }}>部分实现</Text>
+      </Box>
+
+      <Box style={{ flexDirection: 'row', alignItems: 'center', height: 112 }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1E4FA8', letterSpacing: 1, width: 116 }}>实验复现</Text>
+        <Box style={{ flex: 1, flexDirection: 'column', paddingRight: 32 }}>
+          <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1A2230', lineHeight: 1.35 }}>三维高斯建图复现与验证链路</Text>
+          <Text style={{ fontSize: 16, color: '#4A5568', marginTop: 8, lineHeight: 1.45 }}>官方 3DGS / 4DGS 复现达标（37.41 / 40.65 dB）；合成动态场景三配置 × 三种子，掩码加权使静态区 +3.52 dB、残影降至 1/16，判定 5/5 成立；三次复跑 PSNR 标准差 0.02 dB；代码数据已开源</Text>
+        </Box>
+        <Text style={{ fontSize: 16, color: '#4A5568', fontWeight: 'bold', width: 108, textAlign: 'right' }}>已完成</Text>
+      </Box>
+
+    </Box>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', marginTop: 16, padding: '12px 24px', background: '#E8EFF8', height: 74 }}>
+      <Text style={{ fontSize: 16, color: '#1A2230', lineHeight: 1.5 }}>
+        按开题计划：研究内容 1（动态场景高斯建图）完成约 80%，研究内容 2（语义高斯场）完成约 40%，研究内容 3（分层地图组织）完成约 20%，研究内容 4（语义—几何联合导航）完成方案设计。总体工作量约 <span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>45%</span>，进度符合开题预期。
+      </Text>
+    </Box>
+
+  </Box>
+
+  <Box style={{ width: 1280, height: 50, paddingLeft: 60, paddingRight: 60, paddingTop: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>动态环境下视觉语言模型辅助三维高斯语义建图与机器人目标导航</Text>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>21 / 26</Text>
+  </Box>
+
+</Slide>

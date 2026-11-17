@@ -1,0 +1,73 @@
+<Slide style={{ width: 1280, height: 720, backgroundColor: '#FFFFFF', fontFamily: 'Microsoft YaHei', padding: 0, flexDirection: 'column' }}>
+
+  <Box style={{ width: 1280, height: 72, background: '#1E4FA8', paddingLeft: 60, paddingRight: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+      <Box style={{ width: 8, height: 36, background: '#3D7BD9' }} />
+      <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#FFFFFF' }}>本机复刻：三配置对照实验</Text>
+    </Box>
+    <Text style={{ fontSize: 16, color: '#B9CCEA' }}>03 · Reproduction</Text>
+  </Box>
+
+  <Box style={{ width: 1280, height: 598, paddingLeft: 60, paddingRight: 60, paddingTop: 28, flexDirection: 'column' }}>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 26 }}>
+      <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#1A2230' }}>图 4　三配置训练曲线（左）与渲染对照（右）</Text>
+      <Text style={{ fontSize: 13, color: '#8B97A8' }}>本机独立实现 · 3 种子均值 · 2500 迭代 / 5000 基元 · 与论文数字不可直接比较</Text>
+    </Box>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 380 }}>
+      <Image src="assets/fig_repro_curve.png" style={{ width: 616, height: 380, objectFit: 'contain' }} />
+      <Image src="assets/fig_repro_render.png" style={{ width: 436, height: 380, objectFit: 'contain' }} />
+    </Box>
+
+    <Box style={{ flexDirection: 'row', gap: 12, marginTop: 12, height: 84 }}>
+
+      <Box style={{ flex: 1, flexDirection: 'column', padding: '10px 18px', background: '#F5F7FA', borderLeft: '4px solid #C0392B' }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1A2230' }}>A 朴素训练</Text>
+          <Text style={{ fontSize: 13, color: '#8B97A8' }}>全图 22.53</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'baseline', marginTop: 6, gap: 20 }}>
+          <Text style={{ fontSize: 13, color: '#4A5568' }}>静态 <span style={{ fontSize: 20, fontWeight: 'bold', color: '#C0392B' }}>30.90</span> dB</Text>
+          <Text style={{ fontSize: 13, color: '#4A5568' }}>残影 <span style={{ fontSize: 20, fontWeight: 'bold', color: '#C0392B' }}>0.080</span></Text>
+        </Box>
+      </Box>
+
+      <Box style={{ flex: 1, flexDirection: 'column', padding: '10px 18px', background: '#EDF3FB', borderLeft: '4px solid #1E4FA8' }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1E4FA8' }}>B 掩码加权损失</Text>
+          <Text style={{ fontSize: 13, color: '#8B97A8' }}>全图 21.11</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'baseline', marginTop: 6, gap: 20 }}>
+          <Text style={{ fontSize: 13, color: '#4A5568' }}>静态 <span style={{ fontSize: 20, fontWeight: 'bold', color: '#1E4FA8' }}>34.42</span> dB</Text>
+          <Text style={{ fontSize: 13, color: '#4A5568' }}>残影 <span style={{ fontSize: 20, fontWeight: 'bold', color: '#1E4FA8' }}>0.005</span></Text>
+        </Box>
+      </Box>
+
+      <Box style={{ flex: 1, flexDirection: 'column', padding: '10px 18px', background: '#F5F7FA', borderLeft: '4px solid #8B97A8' }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1A2230' }}>C 仅初始化滤波</Text>
+          <Text style={{ fontSize: 13, color: '#8B97A8' }}>全图 22.45</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'baseline', marginTop: 6, gap: 20 }}>
+          <Text style={{ fontSize: 13, color: '#4A5568' }}>静态 <span style={{ fontSize: 20, fontWeight: 'bold', color: '#8B97A8' }}>31.52</span> dB</Text>
+          <Text style={{ fontSize: 13, color: '#4A5568' }}>残影 <span style={{ fontSize: 20, fontWeight: 'bold', color: '#8B97A8' }}>0.072</span></Text>
+        </Box>
+      </Box>
+
+    </Box>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', marginTop: 10, padding: '10px 22px', background: '#E8EFF8', height: 58 }}>
+      <Text style={{ fontSize: 15.5, color: '#1A2230', lineHeight: 1.45 }}>
+        <span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>读图　</span>B 的全图 PSNR 最低属设计使然——它主动放弃拟合动态像素，判据应看静态区与残影；仅做初始化滤波（C）残影仍达 0.072，说明掩码加权损失不可替代，两个环节缺一不可。
+      </Text>
+    </Box>
+
+  </Box>
+
+  <Box style={{ width: 1280, height: 50, paddingLeft: 60, paddingRight: 60, paddingTop: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>动态环境下视觉语言模型辅助三维高斯语义建图与机器人目标导航</Text>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>18 / 26</Text>
+  </Box>
+
+</Slide>

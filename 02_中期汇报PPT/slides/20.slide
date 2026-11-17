@@ -1,0 +1,92 @@
+<Slide style={{ width: 1280, height: 720, backgroundColor: '#FFFFFF', fontFamily: 'Microsoft YaHei', padding: 0, flexDirection: 'column' }}>
+
+  <Box style={{ width: 1280, height: 72, background: '#1E4FA8', paddingLeft: 60, paddingRight: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+      <Box style={{ width: 8, height: 36, background: '#3D7BD9' }} />
+      <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#FFFFFF' }}>公开数据集复现：官方实现跑通并达标</Text>
+    </Box>
+    <Text style={{ fontSize: 16, color: '#B9CCEA' }}>03 · Reproduction</Text>
+  </Box>
+
+  <Box style={{ width: 1280, height: 598, paddingLeft: 60, paddingRight: 60, paddingTop: 28, flexDirection: 'column' }}>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 26 }}>
+      <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#1A2230' }}>表 3　官方 3DGS / 4DGS 在本机的复现结果</Text>
+      <Text style={{ fontSize: 13, color: '#8B97A8' }}>硬件 RTX 4060 8GB · 41 项自动验收全通过</Text>
+    </Box>
+
+    <Box style={{ flexDirection: 'row', gap: 32, marginTop: 8, height: 415 }}>
+
+      <Box style={{ width: 620, flexDirection: 'column' }}>
+        <Table
+          style={{ width: 620, height: 280 }}
+          defaultTextStyle={{ fontSize: 15, textAlign: 'center', color: '#1A2230' }}
+          defaultCellStyle={{
+            border: {
+              left: { width: 0, color: '#FFFFFF' },
+              right: { width: 0, color: '#FFFFFF' },
+              top: { width: 0, color: '#FFFFFF' },
+              bottom: { width: 1, color: '#E5E7EB' },
+            },
+            padding: 5,
+          }}
+          cells={[
+            [
+              { text: '算法 / 场景', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+              { text: '迭代', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+              { text: 'PSNR', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+              { text: 'SSIM', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+              { text: 'LPIPS-VGG', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+            ],
+            ['3DGS　NeRF Synthetic Lego', '30k', '37.41 dB', '0.9861', '0.0130'],
+            ['4DGS　D-NeRF Bouncing Balls', '20k', '40.65 dB', '0.9943', '0.0149'],
+            ['3DGS　T&T Truck（补充）', '7k', '23.98 dB', '0.8529', '0.1950'],
+          ]}
+        />
+
+        <Box style={{ marginTop: 18, padding: '14px 18px', background: '#E8EFF8', borderLeft: '4px solid #1E4FA8' }}>
+          <Text style={{ fontSize: 15.5, color: '#1A2230', lineHeight: 1.5 }}>
+            参考：官方论文在 Lego 上报告 PSNR 35.2 dB 量级，本机 30k 复现 37.41 dB 与之同档。4DGS 在 D-NeRF 动态场景达 40.65 dB，直接对应"动态环境"这一命题。
+          </Text>
+        </Box>
+      </Box>
+
+      <Box style={{ flex: 1, flexDirection: 'column' }}>
+        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1A2230', marginBottom: 12 }}>预处理消融：错一步差 13 倍</Text>
+
+        <Box style={{ flexDirection: 'column', gap: 10 }}>
+          <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', padding: '12px 16px', background: '#F5F7FA', borderLeft: '3px solid #C0392B' }}>
+            <Text style={{ fontSize: 15, color: '#4A5568' }}>原始 RGBA 直接取 RGB（白底）</Text>
+            <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#C0392B' }}>2.38 dB</Text>
+          </Box>
+          <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', padding: '12px 16px', background: '#F5F7FA', borderLeft: '3px solid #C0392B' }}>
+            <Text style={{ fontSize: 15, color: '#4A5568' }}>原始 RGBA 直接取 RGB（黑底）</Text>
+            <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#C0392B' }}>2.82 dB</Text>
+          </Box>
+          <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', padding: '12px 16px', background: '#EDF3FB', borderLeft: '3px solid #1E4FA8' }}>
+            <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1E4FA8' }}>确定性 alpha 合成到白底</Text>
+            <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#1E4FA8' }}>37.41 dB</Text>
+          </Box>
+        </Box>
+
+        <Text style={{ fontSize: 14.5, color: '#4A5568', lineHeight: 1.6, marginTop: 14 }}>
+          Lego 的 PNG 带隐藏 RGB 通道，直接读取会得到全黑或噪声。这一步不做对，无论训练多久都只有 2 dB——复现失败最常见的根因不在算法，在数据管线。
+        </Text>
+      </Box>
+
+    </Box>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', marginTop: 14, padding: '12px 22px', background: '#E8EFF8', height: 76 }}>
+      <Text style={{ fontSize: 15.5, color: '#1A2230', lineHeight: 1.5 }}>
+        <span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>口径　</span>三行结果场景与划分各异，<span style={{ fontWeight: 'bold' }}>不可相互排名</span>；Truck 仅训到 7k checkpoint，属官方真实场景管线补充验证，不构成 30k 主结果；本页数字与后续合成场景机制实验、论文正文数字均不可横向比较。
+      </Text>
+    </Box>
+
+  </Box>
+
+  <Box style={{ width: 1280, height: 50, paddingLeft: 60, paddingRight: 60, paddingTop: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>动态环境下视觉语言模型辅助三维高斯语义建图与机器人目标导航</Text>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>20 / 26</Text>
+  </Box>
+
+</Slide>

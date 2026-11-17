@@ -1,0 +1,101 @@
+﻿编号,月份,arXiv,支柱,题名,表示,语义来源,动态处理,语言接口,机器人闭环
+101,2026-06,2606.23455,动态环境,MeGAS: Thermomechanical Dynamic Gaussian Splatting for Thermophysical Scene Editing,3DGS,未明确,无（静态假设）,未明确,纯离线评测
+102,2026-10,2610.34041,动态环境,T-ConSG: A LiDAR-Based Real-Time Temporal Construction Scene Graph for Dynamic and Evolving Environments,点云,未明确,无（静态假设）,场景图/结构化,仿真平台
+103,2026-08,2608.05356,动态环境,LoDA: A Level of Detection Aware Method and a Multimodal Sensing Benchmark for Object Level Change Detection,点云,实例/全景分割,概率/不确定性,未明确,纯离线评测
+104,2026-10,2610.35224,动态环境,GaussianSpline: Adaptive Bézier Splines for Highly Dynamic 4D Gaussian Splatting,3DGS,未明确,4D/形变场,未明确,纯离线评测
+105,2026-10,2610.05289,动态环境,Mobile-4DGS: Unified Static-Dynamic Real-time Mobile Gaussian Splatting,3DGS,未明确,4D/形变场,未明确,纯离线评测
+106,2026-07,2607.06464,动态环境,Hilti-Trimble-Oxford Dataset: 360 Visual-Inertial Benchmark with Floor Plan Priors for SLAM and Localization,点云,未明确,无（静态假设）,未明确,纯离线评测
+107,2026-06,2606.03479,动态环境,PersistGS: Differentiable Physics for Object Permanence in 4D Gaussian Splatting,3DGS,未明确,4D/形变场,未明确,仿真平台
+108,2026-06,2606.28820,动态环境,CoGS: Compositional Dynamic Human-Object Scenes Gaussian Splatting from Monocular Video,3DGS,未明确,无（静态假设）,未明确,纯离线评测
+109,2026-05,2605.02227,动态环境,Change-Robust Online Topological Memory for Long-Term Relocalization and Semantic Navigation,3DGS,未明确,在线更新/剔除,场景图/结构化,纯离线评测
+110,2026-08,2608.08531,动态环境,ERF-GS: Reconstructing Fast Motion from Disjoint Event-RGB Viewpoints,3DGS,未明确,动态掩码,场景图/结构化,仿真平台
+111,2026-09,2609.18819,动态环境,SEAM: Submap-Anchored Evidence for Lifelong LiDAR Mapping under Trajectory Deformation,点云,未明确,无（静态假设）,未明确,纯离线评测
+112,2026-11,2611.12350,动态环境,"Why fluid relaxation modes matter: Nonlinear frequency response, dynamical integrity, and dynamic pull-in of electrostatic microbeams with squeeze-film damping",未明确,未明确,无（静态假设）,未明确,仿真平台
+113,2026-03,2603.29296,动态环境,"MotionScale: Reconstructing Appearance, Geometry, and Motion of Dynamic Scenes with Scalable 4D Gaussian Splatting",3DGS,未明确,4D/形变场,未明确,纯离线评测
+114,2026-07,2607.21099,动态环境,Construction and Dynamic Update of Channel Gain Maps via 3D Gaussian Splatting,3DGS,未明确,无（静态假设）,未明确,纯离线评测
+115,2026-08,2608.18285,动态环境,QuARC-GS: Quantized Anchored Residual Coding for Compact Dynamic Scene Streaming with Gaussian Splatting,3DGS,未明确,4D/形变场,未明确,纯离线评测
+116,2025-11,2511.23044,动态环境,Geometry-Consistent 4D Gaussian Splatting for Sparse-Input Dynamic View Synthesis,3DGS,未明确,4D/形变场,未明确,纯离线评测
+117,2025-11,2511.05229,动态环境,4D3R: Motion-Aware Neural Reconstruction and Rendering of Dynamic Scenes from Monocular Videos,3DGS,未明确,4D/形变场,场景图/结构化,纯离线评测
+118,2026-02,2602.22731,动态环境,Sapling-NeRF: Geo-Localised Sapling Reconstruction in Forests for Ecological Monitoring,3DGS,未明确,无（静态假设）,未明确,纯离线评测
+119,2025-11,2511.15153,动态环境,SceneEdited: A City-Scale Benchmark for 3D HD Map Updating via Image-Guided Change Detection,点云,实例/全景分割,无（静态假设）,未明确,纯离线评测
+120,2026-02,2602.21668,动态环境,Space-Time Forecasting of Dynamic Scenes with Motion-aware Gaussian Grouping,3DGS,未明确,4D/形变场,未明确,纯离线评测
+121,2026-02,2602.11154,动态环境,SurfPhase: 3D Interfacial Dynamics in Two-Phase Flows from Sparse Videos,网格/TSDF,未明确,4D/形变场,目标类别/语义标签,纯离线评测
+122,2026-01,2602.00671,动态环境,HPC: Hierarchical Point-based Latent Representation for Streaming Dynamic Gaussian Splatting Compression,3DGS,未明确,无（静态假设）,场景图/结构化,纯离线评测
+123,2026-03,2603.18510,高斯建图底座,OnlinePG: Online Open-Vocabulary Panoptic Mapping with 3D Gaussian Splatting,3DGS,CLIP/开放词汇,无（静态假设）,文本查询/开放词汇查询,纯离线评测
+124,2026-07,2607.01860,高斯建图底座,DL-SLAM: Enabling High-Fidelity Gaussian Splatting SLAM in Dynamic Environments based on Dual-Level Probability,3DGS,未明确,概率/不确定性,未明确,纯离线评测
+125,2026-02,2602.20807,高斯建图底座,RU4D-SLAM: Reweighting Uncertainty in Gaussian Splatting SLAM for 4D Scene Reconstruction,3DGS,未明确,动态掩码,未明确,纯离线评测
+126,2026-10,2610.07569,高斯建图底座,OpenSplatGraph: From Dense Semantic Maps to Structured Scene Graphs for Open-Vocabulary Robot Perception,3DGS,CLIP/开放词汇,无（静态假设）,场景图/结构化,纯离线评测
+127,2026-09,2609.26315,高斯建图底座,ArborSplat: Online Semantic Gaussian Splatting SLAM for Orchards,3DGS,未明确,无（静态假设）,目标类别/语义标签,纯离线评测
+128,2026-09,2609.04602,高斯建图底座,NavArena: Automated Construction of Goal-Oriented Navigation Benchmarks from 3D Gaussian Splatting Reconstructions,3DGS,CLIP/开放词汇,无（静态假设）,文本查询/开放词汇查询,纯离线评测
+129,2026-01,2601.05738,高斯建图底座,FeatureSLAM: Feature-enriched 3D gaussian splatting SLAM in real time,3DGS,CLIP/开放词汇,无（静态假设）,目标类别/语义标签,纯离线评测
+130,2026-01,2601.04754,高斯建图底座,ProFuse: Efficient Cross-View Context Fusion for Open-Vocabulary 3D Gaussian Splatting,3DGS,CLIP/开放词汇,无（静态假设）,文本查询/开放词汇查询,纯离线评测
+131,2026-03,2603.18218,高斯建图底座,Semantic Segmentation and Depth Estimation for Real-Time Lunar Surface Mapping Using 3D Gaussian Splatting,3DGS,实例/全景分割,无（静态假设）,未明确,纯离线评测
+132,2026-08,2608.10756,高斯建图底座,Embodied Multimodal Grounding for Open-Vocabulary Mobile Manipulation via Semantic 3D Gaussian Splatting,3DGS,CLIP/开放词汇,无（静态假设）,文本查询/开放词汇查询,纯离线评测
+133,2026-08,2608.29003,高斯建图底座,RoSe-SLAM: Robust Semantic-Aware Gaussian Splatting SLAM from Dynamic Monocular Videos,3DGS,实例/全景分割,无（静态假设）,目标类别/语义标签,纯离线评测
+134,2026-11,2611.12038,高斯建图底座,DPGS-SLAM: Diffusion-Prior and Provenance-Aware Monocular Gaussian Splatting SLAM for Dynamic Visual Sensing,3DGS,实例/全景分割,4D/形变场,未明确,纯离线评测
+135,2026-08,2608.14902,高斯建图底座,Geometry-Aware Online Mapping for 3D Gaussian Splatting SLAM,3DGS,未明确,概率/不确定性,未明确,纯离线评测
+136,2026-05,2605.04506,高斯建图底座,Ilov3Splat: Instance-Level Open-Vocabulary 3D Scene Understanding in Gaussian Splatting,3DGS,CLIP/开放词汇,无（静态假设）,文本查询/开放词汇查询,纯离线评测
+137,2026-11,2611.01939,高斯建图底座,VLSplat: Vision-Language Guided Object-Centric 3D Gaussian Splatting via Scene Graph,3DGS,实例/全景分割,无（静态假设）,场景图/结构化,纯离线评测
+138,2026-08,2608.11150,高斯建图底座,CausalSplat: Towards Comprehensive Hierarchical Reasoning in 3D Gaussian Splatting,3DGS,CLIP/开放词汇,无（静态假设）,场景图/结构化,纯离线评测
+139,2026-11,2611.10379,高斯建图底座,RefineSplat: Reconstruction-Guided Object-Centric Gaussian Splatting for Open-Vocabulary Querying,3DGS,CLIP/开放词汇,无（静态假设）,文本查询/开放词汇查询,纯离线评测
+140,2026-09,2609.17387,高斯建图底座,PanoGS-SLAM: Panoramic 3D Gaussian Splatting SLAM,3DGS,未明确,无（静态假设）,未明确,纯离线评测
+141,2025-11,2511.16144,高斯建图底座,LEGO-SLAM: Language-Embedded Gaussian Optimization SLAM,3DGS,CLIP/开放词汇,无（静态假设）,文本查询/开放词汇查询,纯离线评测
+142,2026-03,2603.19137,高斯建图底座,GSMem: 3D Gaussian Splatting as Persistent Spatial Memory for Zero-Shot Embodied Exploration and Reasoning,3DGS,VLM/LLM蒸馏,无（静态假设）,场景图/结构化,纯离线评测
+143,2026-07,2607.18801,高斯建图底座,ZeroSplat: Generalized Referring Segmentation in 3D Gaussian Splatting,3DGS,VLM/LLM蒸馏,无（静态假设）,未明确,纯离线评测
+144,2026-07,2607.09260,高斯建图底座,AnythingReality: Robust Online Gaussian Splatting SLAM for Open-Vocabulary VR Scene Exploration,3DGS,CLIP/开放词汇,无（静态假设）,文本查询/开放词汇查询,纯离线评测
+145,2026-01,2601.12122,高斯建图底座,OctoSplat: Hybrid OctoMap-Gaussian Splatting for Active Semantic Mapping and Phenotyping with Horticultural Robots,3DGS,实例/全景分割,概率/不确定性,未明确,仿真平台
+146,2026-03,2603.09632,高斯建图底座,X-GS: An Extensible Framework for Perceiving and Thinking with 3D Gaussian Splatting,3DGS,VLM/LLM蒸馏,无（静态假设）,未明确,纯离线评测
+147,2026-06,2606.30809,高斯建图底座,GaussLite: Online Task-Conditioned 3D Gaussian Splatting for Real-Time Robotic Mapping,3DGS,CLIP/开放词汇,无（静态假设）,文本查询/开放词汇查询,真实机器人
+148,2026-05,2605.13600,高斯建图底座,Sparse Code Uplifting for Efficient 3D Language Gaussian Splatting,3DGS,CLIP/开放词汇,无（静态假设）,文本查询/开放词汇查询,纯离线评测
+149,2026-06,2606.17432,高斯建图底座,Edit3DGS: Unified Framework for Dynamic Head Editing via 2D Instruction-Guided Diffusion and 3D Gaussian Splatting,3DGS,实例/全景分割,无（静态假设）,未明确,纯离线评测
+150,2025-12,2512.08625,高斯建图底座,OpenMonoGS-SLAM: Monocular Gaussian Splatting SLAM with Open-set Semantics,3DGS,CLIP/开放词汇,无（静态假设）,文本查询/开放词汇查询,纯离线评测
+151,2026-07,2607.25106,机器人目标导航,IMPRINT: Image-Conditioned Query Enrichment for Long-Tail Object Goal Navigation,未明确,VLM/LLM蒸馏,无（静态假设）,文本查询/开放词汇查询,仿真平台
+152,2026-06,2606.27871,机器人目标导航,LocalNav: Distilling Frontier VLMs and Embodied RL for On-Device Object Goal Navigation,未明确,VLM/LLM蒸馏,无（静态假设）,未明确,真实机器人
+153,2026-08,2608.22896,机器人目标导航,SuperMap: A Spatio-Temporal SLAM System for Visual-Language Navigation,未明确,VLM/LLM蒸馏,4D/形变场,文本查询/开放词汇查询,真实机器人
+154,2026-10,2610.20121,机器人目标导航,"HM3D-M3: A Benchmark for Multi-Agent, Multi-Modal, Multi-Object Goal Navigation",未明确,CLIP/开放词汇,无（静态假设）,文本查询/开放词汇查询,纯离线评测
+155,2026-01,2602.00551,机器人目标导航,APEX: A Decoupled Memory-based Explorer for Asynchronous Aerial Object Goal Navigation,未明确,VLM/LLM蒸馏,无（静态假设）,文本查询/开放词汇查询,纯离线评测
+156,2026-05,2605.19958,机器人目标导航,TravExplorer: Cross-Floor Embodied Exploration via Traversability-Aware 3-D Planning,未明确,CLIP/开放词汇,概率/不确定性,文本查询/开放词汇查询,仿真平台
+157,2026-11,2611.11978,机器人目标导航,CSG-Nav: Confidence-Aware Semantic-Geometric Fusion for Robust Exploration and Accurate Zero-Shot Object-Goal Navigation,3DGS,CLIP/开放词汇,概率/不确定性,文本查询/开放词汇查询,纯离线评测
+158,2026-01,2601.01872,机器人目标导航,CausalNav: A Long-term Embodied Navigation System for Autonomous Mobile Robots in Dynamic Outdoor Scenarios,未明确,CLIP/开放词汇,无（静态假设）,场景图/结构化,真实机器人
+159,2026-05,2605.01736,机器人目标导航,Multi-Scale Gaussian-Language Map for Zero-shot Embodied Navigation and Reasoning,3DGS,未明确,无（静态假设）,未明确,纯离线评测
+160,2026-10,2610.19618,机器人目标导航,F2A-ObjectNav: An Adaptive Agentic Architecture for Object-Goal Navigation,未明确,未明确,无（静态假设）,未明确,仿真平台
+161,2026-10,2610.28476,机器人目标导航,CLOSER: Evidence-Aware Active Visual Verification for Embodied Object-Goal Navigation,未明确,VLM/LLM蒸馏,无（静态假设）,未明确,仿真平台
+162,2026-10,2610.34286,机器人目标导航,ScheNav: Schematic-Guided Object Goal Navigation,未明确,未明确,无（静态假设）,未明确,仿真平台
+163,2026-11,2611.10366,机器人目标导航,CPNav: Calibrated Vision-Language Navigation for Object-Goal Search in Unseen Environments,未明确,VLM/LLM蒸馏,无（静态假设）,未明确,仿真平台
+164,2026-08,2608.30935,机器人目标导航,LightNav-0: Eliciting VLM Spatial Intelligence for Generalist Embodied Navigation,未明确,VLM/LLM蒸馏,无（静态假设）,文本查询/开放词汇查询,仿真平台
+165,2026-09,2609.24189,机器人目标导航,A Topological Representation with Object-Path Graphs for Open-Vocabulary Instance Navigation,未明确,CLIP/开放词汇,无（静态假设）,场景图/结构化,纯离线评测
+166,2026-02,2602.05467,机器人目标导航,MerNav: A Highly Generalizable Memory-Execute-Review Framework for Zero-Shot Object Goal Navigation,未明确,CLIP/开放词汇,无（静态假设）,场景图/结构化,真实机器人
+167,2026-03,2603.21887,机器人目标导航,IGV-RRT: Prior-Real-Time Observation Fusion for Active Object Search in Changing Environments,未明确,VLM/LLM蒸馏,概率/不确定性,场景图/结构化,仿真平台
+168,2026-06,2606.01788,机器人目标导航,PlatonicNav: Unveiling Semantic Correspondence in Navigation with Platonic Topological Maps,BEV/2.5D,CLIP/开放词汇,无（静态假设）,未明确,仿真平台
+169,2026-06,2606.03509,机器人目标导航,EvoMemNav: Efficient Self-Evolving Fine-Grained Memory for Zero-Shot Embodied Navigation,未明确,VLM/LLM蒸馏,无（静态假设）,场景图/结构化,纯离线评测
+170,2025-11,2511.10376,机器人目标导航,MSGNav: Unleashing the Power of Multi-modal 3D Scene Graph for Zero-Shot Embodied Navigation,未明确,CLIP/开放词汇,无（静态假设）,场景图/结构化,纯离线评测
+171,2026-03,2603.18210,机器人目标导航,GoalVLM: VLM-driven Object Goal Navigation for Multi-Agent System,3DGS,VLM/LLM蒸馏,概率/不确定性,文本查询/开放词汇查询,纯离线评测
+172,2026-06,2606.03682,机器人目标导航,"GN0: Toward a Unified Paradigm for Generation, Evaluation, and Policy Learning in Visual-Language Navigation",3DGS,VLM/LLM蒸馏,无（静态假设）,未明确,仿真平台
+173,2025-11,2511.08935,机器人目标导航,Expand Your SCOPE: Semantic Cognition over Potential-Based Exploration for Embodied Visual Navigation,未明确,VLM/LLM蒸馏,无（静态假设）,场景图/结构化,纯离线评测
+174,2026-03,2603.16301,机器人目标导航,OGScene3D: Incremental Open-Vocabulary 3D Gaussian Scene Graph Mapping for Scene Understanding,3DGS,CLIP/开放词汇,无（静态假设）,场景图/结构化,纯离线评测
+175,2026-03,2603.12908,机器人目标导航,GoalSwarm: Multi-UAV Semantic Coordination for Open-Vocabulary Object Navigation,未明确,CLIP/开放词汇,概率/不确定性,文本查询/开放词汇查询,真实机器人
+176,2025-12,2512.24212,机器人目标导航,RANGER: A Monocular Zero-Shot Semantic Navigation Framework through Visual Contextual Adaptation,点云,VLM/LLM蒸馏,无（静态假设）,文本查询/开放词汇查询,纯离线评测
+177,2026-05,2605.14801,视觉语言模型,Exploring Bottlenecks in VLM-LLM Navigation: How 3D Scene Understanding Capability Impacts Zero-Shot VLN,BEV/2.5D,VLM/LLM蒸馏,无（静态假设）,场景图/结构化,纯离线评测
+178,2026-06,2606.19776,视觉语言模型,Occ-VLM: Occupancy Grounded Vision Language Model for Indoor Scene Understanding,点云,VLM/LLM蒸馏,无（静态假设）,未明确,纯离线评测
+179,2026-09,2609.21400,视觉语言模型,A Scene Language Model for Open-Vocabulary Scene Mapping,未明确,CLIP/开放词汇,动态掩码,文本查询/开放词汇查询,纯离线评测
+180,2026-09,2609.12285,视觉语言模型,AnchorVLN: Geometry-Anchored Vision-Language Grounding Reasoning for Open-Vocabulary Navigation,未明确,VLM/LLM蒸馏,无（静态假设）,文本查询/开放词汇查询,纯离线评测
+181,2026-03,2603.26541,视觉语言模型,OVI-MAP:Open-Vocabulary Instance-Semantic Mapping,未明确,CLIP/开放词汇,无（静态假设）,目标类别/语义标签,纯离线评测
+182,2026-06,2606.31471,视觉语言模型,Think While You Map: Asynchronous Vision-Language Agents for Incremental 3D Scene Graphs,点云,VLM/LLM蒸馏,概率/不确定性,场景图/结构化,纯离线评测
+183,2026-06,2606.05975,视觉语言模型,T-FunS3D: Task-Driven Hierarchical Open-Vocabulary 3D Functionality Segmentation,点云,CLIP/开放词汇,无（静态假设）,场景图/结构化,纯离线评测
+184,2026-05,2605.17249,视觉语言模型,SEDualVLN: A Spatially-Enhanced Dual-System Framework for Vision-Language Navigation,未明确,VLM/LLM蒸馏,无（静态假设）,未明确,纯离线评测
+185,2026-08,2608.17633,视觉语言模型,"OVIP-SG: Open-Vocabulary Instance-Preserving Scene Graphs for Mapping and Retrieval of Small, Fine-Grained Objects",点云,VLM/LLM蒸馏,无（静态假设）,场景图/结构化,纯离线评测
+186,2026-09,2609.24576,视觉语言模型,What do VLM-Based Vision-Language Navigation Models Rely on: Interpreting and Steering Policy Behavior,未明确,VLM/LLM蒸馏,无（静态假设）,未明确,纯离线评测
+187,2026-01,2601.06474,视觉语言模型,SparseOccVLA: Bridging Occupancy and Vision-Language Models via Sparse Queries for Unified 4D Scene Understanding and Planning,未明确,VLM/LLM蒸馏,4D/形变场,未明确,纯离线评测
+188,2025-12,2512.07215,视觉语言模型,VFM-VLM: Vision Foundation Model and Vision Language Model based Visual Comparison for 3D Pose Estimation,未明确,VLM/LLM蒸馏,无（静态假设）,未明确,纯离线评测
+189,2026-02,2602.02456,视觉语言模型,Relationship-Aware Hierarchical 3D Scene Graph for Task Reasoning,未明确,VLM/LLM蒸馏,无（静态假设）,场景图/结构化,纯离线评测
+190,2026-07,2607.16173,视觉语言模型,"Vision-Language-Motion Maps: An Open-Vocabulary, Uncertainty-Aware, Queryable Motion Attribute for 3D Scene Maps",未明确,VLM/LLM蒸馏,概率/不确定性,文本查询/开放词汇查询,仿真平台
+191,2026-06,2606.27807,视觉语言模型,SpikeVLA: Vision-Language-Action Models with Spiking Neural Networks,未明确,VLM/LLM蒸馏,无（静态假设）,未明确,纯离线评测
+192,2026-04,2604.28115,视觉语言模型,FreeOcc: Training-Free Embodied Open-Vocabulary Occupancy Prediction,3DGS,CLIP/开放词汇,概率/不确定性,文本查询/开放词汇查询,纯离线评测
+193,2026-08,2609.00111,视觉语言模型,Qwen-Drive-1.0: An Initial Step towards a Vision-Language Foundation Model for Autonomous Driving,BEV/2.5D,VLM/LLM蒸馏,无（静态假设）,未明确,纯离线评测
+194,2026-10,2610.23419,视觉语言模型,mmPencil: Toward Writing-Style-Independent In-Air Handwriting Recognition via mmWave Radar and Large Vision-Language Model,未明确,VLM/LLM蒸馏,无（静态假设）,目标类别/语义标签,纯离线评测
+195,2026-11,2611.11692,视觉语言模型,LocateAnyMesh: Grounding 3D Mesh Queries in 2D Images with Vision-Language Models,网格/TSDF,VLM/LLM蒸馏,无（静态假设）,文本查询/开放词汇查询,纯离线评测
+196,2026-09,2609.06535,视觉语言模型,3DHarnessBench: Probing Agentic 3D-to-Code Capabilities of Frontier Vision-Language Models,未明确,VLM/LLM蒸馏,无（静态假设）,文本查询/开放词汇查询,纯离线评测
+197,2026-09,2609.01059,视觉语言模型,Dyn-3D: Unveiling and Resolving Ego-Motion Ambiguity in Vision-Language Models,未明确,VLM/LLM蒸馏,无（静态假设）,场景图/结构化,纯离线评测
+198,2026-01,2601.09575,视觉语言模型,OpenVoxel: Training-Free Grouping and Captioning Voxels for Open-Vocabulary 3D Scene Understanding,点云,VLM/LLM蒸馏,无（静态假设）,文本查询/开放词汇查询,纯离线评测
+199,2025-12,2512.01889,视觉语言模型,KM-ViPE: Online Tightly Coupled Vision-Language-Geometry Fusion for Open-Vocabulary Semantic SLAM,未明确,CLIP/开放词汇,动态掩码,文本查询/开放词汇查询,纯离线评测
+200,2026-02,2602.20409,视觉语言模型,CLIPoint3D: Language-Grounded Few-Shot Unsupervised 3D Point Cloud Domain Adaptation,点云,VLM/LLM蒸馏,概率/不确定性,文本查询/开放词汇查询,纯离线评测

@@ -1,0 +1,85 @@
+<Slide style={{ width: 1280, height: 720, backgroundColor: '#FFFFFF', fontFamily: 'Microsoft YaHei', padding: 0, flexDirection: 'column' }}>
+
+  <Box style={{ width: 1280, height: 72, background: '#1E4FA8', paddingLeft: 60, paddingRight: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+      <Box style={{ width: 8, height: 36, background: '#3D7BD9' }} />
+      <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#FFFFFF' }}>已有研究的三条脉络与共同空白</Text>
+    </Box>
+    <Text style={{ fontSize: 16, color: '#B9CCEA' }}>01 · Literature</Text>
+  </Box>
+
+  <Box style={{ width: 1280, height: 598, paddingLeft: 60, paddingRight: 60, paddingTop: 28, flexDirection: 'column' }}>
+
+    <Box style={{ flexDirection: 'row', gap: 24, height: 400 }}>
+
+      <Box style={{ flex: 1, flexDirection: 'column', padding: '24px 22px', border: '1px solid #D6DCE5' }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, marginBottom: 16 }}>
+          <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#1E4FA8' }}>Ⅰ</Text>
+          <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1A2230' }}>动态场景 SLAM</Text>
+        </Box>
+        <Text style={{ fontSize: 17, color: '#4A5568', lineHeight: 1.6, marginBottom: 14 }}>
+          <span style={{ fontWeight: 'bold', color: '#1A2230' }}>代表工作　</span>DynaSLAM、DS-SLAM、WildGS-SLAM
+        </Text>
+        <Text style={{ fontSize: 17, color: '#4A5568', lineHeight: 1.6 }}>
+          <span style={{ fontWeight: 'bold', color: '#1A2230' }}>共同做法　</span>用预训练语义分割或运动一致性检测动态像素，再在跟踪与建图中剔除。
+        </Text>
+        <Box style={{ marginTop: 'auto', paddingTop: 14, borderTop: '1px solid #D6DCE5' }}>
+          <Text style={{ fontSize: 17, color: '#D9534F', lineHeight: 1.55 }}>
+            局限：语义类别固定，训练集外物体（推车、纸箱）系统性漏检；分割网络本身带来额外算力开销。
+          </Text>
+        </Box>
+      </Box>
+
+      <Box style={{ flex: 1, flexDirection: 'column', padding: '24px 22px', border: '1px solid #D6DCE5' }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, marginBottom: 16 }}>
+          <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#1E4FA8' }}>Ⅱ</Text>
+          <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1A2230' }}>三维高斯泼溅建图</Text>
+        </Box>
+        <Text style={{ fontSize: 17, color: '#4A5568', lineHeight: 1.6, marginBottom: 14 }}>
+          <span style={{ fontWeight: 'bold', color: '#1A2230' }}>代表工作　</span>3DGS、SplaTAM、MonoGS、GS-SLAM
+        </Text>
+        <Text style={{ fontSize: 17, color: '#4A5568', lineHeight: 1.6 }}>
+          <span style={{ fontWeight: 'bold', color: '#1A2230' }}>共同做法　</span>以各向异性高斯为显式基元，可微光栅化 + 梯度致密化，渲染质量与速度同时优于 NeRF 系。
+        </Text>
+        <Box style={{ marginTop: 'auto', paddingTop: 14, borderTop: '1px solid #D6DCE5' }}>
+          <Text style={{ fontSize: 17, color: '#D9534F', lineHeight: 1.55 }}>
+            局限：主流实现仍假设静态世界；4DGS 一类动态扩展依赖多视图或强监督，单目实时 SLAM 下代价过高。
+          </Text>
+        </Box>
+      </Box>
+
+      <Box style={{ flex: 1, flexDirection: 'column', padding: '24px 22px', border: '1px solid #D6DCE5' }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, marginBottom: 16 }}>
+          <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#1E4FA8' }}>Ⅲ</Text>
+          <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1A2230' }}>开放词汇三维语义场</Text>
+        </Box>
+        <Text style={{ fontSize: 17, color: '#4A5568', lineHeight: 1.6, marginBottom: 14 }}>
+          <span style={{ fontWeight: 'bold', color: '#1A2230' }}>代表工作　</span>LERF、OpenScene、ConceptFusion、Gaussian Grouping
+        </Text>
+        <Text style={{ fontSize: 17, color: '#4A5568', lineHeight: 1.6 }}>
+          <span style={{ fontWeight: 'bold', color: '#1A2230' }}>共同做法　</span>把 CLIP 类视觉语言特征挂载到点、体素或高斯上，用文本查询检索三维区域。
+        </Text>
+        <Box style={{ marginTop: 'auto', paddingTop: 14, borderTop: '1px solid #D6DCE5' }}>
+          <Text style={{ fontSize: 17, color: '#D9534F', lineHeight: 1.55 }}>
+            局限：以离线重建为前提，建图与查询分两阶段；每基元数百维特征导致存储膨胀，难以在线更新。
+          </Text>
+        </Box>
+      </Box>
+
+    </Box>
+
+    <Box style={{ flexDirection: 'column', marginTop: 28, padding: '16px 24px', background: '#E8EFF8', borderLeft: '4px solid #1E4FA8', height: 110 }}>
+      <Text style={{ fontSize: 15, color: '#1E4FA8', fontWeight: 'bold', letterSpacing: 2, marginBottom: 8 }}>共同空白</Text>
+      <Text style={{ fontSize: 18, color: '#1A2230', lineHeight: 1.55 }}>
+        现有方法在"动态鲁棒性 — 语义开放性 — 导航可用性"三者中最多满足两项；缺少一条在<span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>单目实时条件</span>下把三者统一到同一基元表示的路径。本课题从语义辅助动态判定这一空白切入。
+      </Text>
+    </Box>
+
+  </Box>
+
+  <Box style={{ width: 1280, height: 50, paddingLeft: 60, paddingRight: 60, paddingTop: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>动态环境下视觉语言模型辅助三维高斯语义建图与机器人目标导航</Text>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>5 / 26</Text>
+  </Box>
+
+</Slide>

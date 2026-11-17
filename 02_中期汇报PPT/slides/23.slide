@@ -1,0 +1,74 @@
+<Slide style={{ width: 1280, height: 720, backgroundColor: '#FFFFFF', fontFamily: 'Microsoft YaHei', padding: 0, flexDirection: 'column' }}>
+
+  <Box style={{ width: 1280, height: 72, background: '#1E4FA8', paddingLeft: 60, paddingRight: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+      <Box style={{ width: 8, height: 36, background: '#3D7BD9' }} />
+      <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#FFFFFF' }}>三个尚未解决的问题</Text>
+    </Box>
+    <Text style={{ fontSize: 16, color: '#B9CCEA' }}>04 · Limitations</Text>
+  </Box>
+
+  <Box style={{ width: 1280, height: 598, paddingLeft: 60, paddingRight: 60, paddingTop: 28, flexDirection: 'column' }}>
+
+    <Box style={{ flexDirection: 'row', gap: 0, height: 166, borderBottom: '1px solid #D6DCE5', alignItems: 'center' }}>
+      <Box style={{ width: 420, flexDirection: 'column', paddingRight: 28 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'baseline', gap: 12 }}>
+          <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#D9534F' }}>01</Text>
+          <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1A2230', lineHeight: 1.3 }}>拥挤场景动态掩码漏检</Text>
+        </Box>
+        <Text style={{ fontSize: 16, color: '#4A5568', marginTop: 10, lineHeight: 1.5 }}>公开发布序列召回 92.8%；自建密集多人场景粗测约 78%（尚未系统评测）</Text>
+      </Box>
+      <Box style={{ flex: 1, flexDirection: 'column', paddingLeft: 28, borderLeft: '1px solid #E5E7EB' }}>
+        <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.6 }}>
+          漏检像素进入位姿优化后，会在关键帧间隔内累积成漂移；密集场景是本方案最脆弱的地方。
+        </Text>
+        <Text style={{ fontSize: 16, color: '#1E4FA8', fontWeight: 'bold', marginTop: 8, lineHeight: 1.5 }}>对策：跨帧掩码传播，用时序一致性约束替代逐帧独立判定</Text>
+      </Box>
+    </Box>
+
+    <Box style={{ flexDirection: 'row', gap: 0, height: 166, borderBottom: '1px solid #D6DCE5', alignItems: 'center' }}>
+      <Box style={{ width: 420, flexDirection: 'column', paddingRight: 28 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'baseline', gap: 12 }}>
+          <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#D9534F' }}>02</Text>
+          <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1A2230', lineHeight: 1.3 }}>语义特征存储膨胀</Text>
+        </Box>
+        <Text style={{ fontSize: 16, color: '#4A5568', marginTop: 10, lineHeight: 1.5 }}>每基元 512 维 float32 特征约 2 KB，是几何参数 44 B 的 46 倍</Text>
+      </Box>
+      <Box style={{ flex: 1, flexDirection: 'column', paddingLeft: 28, borderLeft: '1px solid #E5E7EB' }}>
+        <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.6 }}>
+          十万基元场景的特征张量约 205 MB，无法在 Jetson Orin Nano 的 8 GB 内存里与建图线程共存。
+        </Text>
+        <Text style={{ fontSize: 16, color: '#1E4FA8', fontWeight: 'bold', marginTop: 8, lineHeight: 1.5 }}>对策：乘积量化码本压缩至 64 维，配合增量更新避免全量重算</Text>
+      </Box>
+    </Box>
+
+    <Box style={{ flexDirection: 'row', gap: 0, height: 166, alignItems: 'center' }}>
+      <Box style={{ width: 420, flexDirection: 'column', paddingRight: 28 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'baseline', gap: 12 }}>
+          <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#D9534F' }}>03</Text>
+          <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1A2230', lineHeight: 1.3 }}>语义地图到导航未闭环</Text>
+        </Box>
+        <Text style={{ fontSize: 16, color: '#4A5568', marginTop: 10, lineHeight: 1.5 }}>导航层仅完成方案与接口设计，尚无实机闭环；动态条件下的评测维度也尚未建立</Text>
+      </Box>
+      <Box style={{ flex: 1, flexDirection: 'column', paddingLeft: 28, borderLeft: '1px solid #E5E7EB' }}>
+        <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.6 }}>
+          前三项内容都已具备导航层所需的输入（度量轨迹、干净地图、可查询语义场），缺的是把它们接成闭环、并在动态扰动下测出成功率下降幅度。
+        </Text>
+        <Text style={{ fontSize: 16, color: '#1E4FA8', fontWeight: 'bold', marginTop: 8, lineHeight: 1.5 }}>对策：2028 年 1—3 月完成四足平台实机闭环，并在 NavArena 场景注入动态扰动</Text>
+      </Box>
+    </Box>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', marginTop: 12, padding: '10px 24px', background: '#E8EFF8', height: 54 }}>
+      <Text style={{ fontSize: 16, color: '#1A2230', lineHeight: 1.45 }}>
+        上述三项均已写入下阶段计划：01、02 属技术风险，03 属工程与评测进度风险——它不影响方法有效性判断，但决定最终结论能覆盖到哪一层。
+      </Text>
+    </Box>
+
+  </Box>
+
+  <Box style={{ width: 1280, height: 50, paddingLeft: 60, paddingRight: 60, paddingTop: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>动态环境下视觉语言模型辅助三维高斯语义建图与机器人目标导航</Text>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>23 / 26</Text>
+  </Box>
+
+</Slide>

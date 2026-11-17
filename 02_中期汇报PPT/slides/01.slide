@@ -1,0 +1,27 @@
+<Slide style={{ width: 1280, height: 720, backgroundColor: '#FFFFFF', fontFamily: 'Microsoft YaHei', padding: 0, flexDirection: 'column' }}>
+  <Box style={{ width: 1280, height: 8, background: '#1E4FA8' }} />
+  <Box style={{ width: 1280, height: 712, paddingLeft: 100, paddingRight: 100, paddingTop: 92, paddingBottom: 64, flexDirection: 'column', justifyContent: 'space-between' }}>
+
+    <Box style={{ flexDirection: 'column' }}>
+      <Text style={{ fontSize: 16, color: '#3D7BD9', letterSpacing: 3, marginBottom: 30 }}>广东工业大学 · 硕士学位论文中期检查汇报</Text>
+      <Box style={{ flexDirection: 'row', gap: 26 }}>
+        <Box style={{ width: 6, height: 124, background: '#1E4FA8' }} />
+        <Text style={{ fontSize: 44, fontWeight: 'bold', color: '#1A2230', lineHeight: 1.32, width: 940 }}>
+          动态环境下视觉语言模型辅助<br />三维高斯语义建图与机器人目标导航
+        </Text>
+      </Box>
+      <Text style={{ fontSize: 17, color: '#4A5568', lineHeight: 1.65, marginTop: 30, width: 980 }}>
+        Vision-Language Model-Assisted 3D Gaussian Semantic Mapping and Robot Object-Goal Navigation in Dynamic Environments
+      </Text>
+    </Box>
+
+    <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end', borderTop: '1px solid #D6DCE5', paddingTop: 26 }}>
+      <Box style={{ flexDirection: 'column', gap: 12 }}>
+        <Text style={{ fontSize: 20, color: '#1A2230', fontWeight: 'bold' }}>李梓鹏　<span style={{ fontSize: 17, fontWeight: 'normal', color: '#4A5568' }}>学号 2122515166</span></Text>
+        <Text style={{ fontSize: 16, color: '#4A5568' }}>指导教师：陈静　教授　｜　光电信息工程　｜　专业学位硕士（全日制）</Text>
+      </Box>
+      <Text style={{ fontSize: 16, color: '#8B97A8' }}>2026 年 12 月</Text>
+    </Box>
+
+  </Box>
+</Slide>

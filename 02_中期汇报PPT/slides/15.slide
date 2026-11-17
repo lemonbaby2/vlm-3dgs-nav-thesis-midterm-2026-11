@@ -1,0 +1,97 @@
+<Slide style={{ width: 1280, height: 720, backgroundColor: '#FFFFFF', fontFamily: 'Microsoft YaHei', padding: 0, flexDirection: 'column' }}>
+
+  <Box style={{ width: 1280, height: 72, background: '#1E4FA8', paddingLeft: 60, paddingRight: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+      <Box style={{ width: 8, height: 36, background: '#3D7BD9' }} />
+      <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#FFFFFF' }}>动态掩码质量与相机轨迹精度</Text>
+    </Box>
+    <Text style={{ fontSize: 16, color: '#B9CCEA' }}>03 · Result 01</Text>
+  </Box>
+
+  <Box style={{ width: 1280, height: 598, paddingLeft: 60, paddingRight: 60, paddingTop: 28, flexDirection: 'column' }}>
+
+    <Box style={{ flexDirection: 'row', gap: 24, height: 148 }}>
+      <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', paddingLeft: 24, borderLeft: '3px solid #1E4FA8' }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'baseline', gap: 8 }}>
+          <Text style={{ fontSize: 68, fontWeight: 'bold', color: '#1E4FA8', lineHeight: 1 }}>0.012</Text>
+          <Text style={{ fontSize: 22, color: '#1E4FA8' }}>m</Text>
+        </Box>
+        <Text style={{ fontSize: 16, color: '#4A5568', marginTop: 12, lineHeight: 1.45 }}>平均 ATE RMSE　覆盖 4 个 TUM 动态序列</Text>
+      </Box>
+      <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', paddingLeft: 24, borderLeft: '3px solid #3D7BD9' }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'baseline', gap: 8 }}>
+          <Text style={{ fontSize: 68, fontWeight: 'bold', color: '#1E4FA8', lineHeight: 1 }}>96.2</Text>
+          <Text style={{ fontSize: 22, color: '#1E4FA8' }}>%</Text>
+        </Box>
+        <Text style={{ fontSize: 16, color: '#4A5568', marginTop: 12, lineHeight: 1.45 }}>动态掩码准确率　不使用语义先验</Text>
+      </Box>
+      <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', paddingLeft: 24, borderLeft: '3px solid #3D7BD9' }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'baseline', gap: 8 }}>
+          <Text style={{ fontSize: 68, fontWeight: 'bold', color: '#1E4FA8', lineHeight: 1 }}>47</Text>
+          <Text style={{ fontSize: 22, color: '#1E4FA8' }}>倍</Text>
+        </Box>
+        <Text style={{ fontSize: 16, color: '#4A5568', marginTop: 12, lineHeight: 1.45 }}>相对 ORB-SLAM3（0.562 m）的精度提升</Text>
+      </Box>
+    </Box>
+
+    <Box style={{ flexDirection: 'row', gap: 32, height: 396, marginTop: 24 }}>
+
+      <Box style={{ width: 620, flexDirection: 'column' }}>
+        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1A2230', marginBottom: 12 }}>表 1　动态掩码生成性能（TUM fr3/walking）</Text>
+        <Table
+          style={{ width: 620, height: 250 }}
+          defaultTextStyle={{ fontSize: 16, textAlign: 'center', color: '#1A2230' }}
+          defaultCellStyle={{
+            border: {
+              left: { width: 0, color: '#FFFFFF' },
+              right: { width: 0, color: '#FFFFFF' },
+              top: { width: 0, color: '#FFFFFF' },
+              bottom: { width: 1, color: '#E5E7EB' },
+            },
+            padding: 6,
+          }}
+          cells={[
+            [
+              { text: '方法', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+              { text: '语义先验', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+              { text: 'Accuracy (%)', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+              { text: 'F1 (%)', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+            ],
+            ['DS-SLAM', 'DeepLab', '93.5', '90.4'],
+            ['DynaSLAM', 'Mask R-CNN', '92.8', '89.3'],
+            ['WildGS-SLAM', 'DINOv2', '94.7', '92.1'],
+            [
+              { text: '本研究', textStyle: { bold: true, color: '#1E4FA8' } },
+              { text: '无', textStyle: { bold: true, color: '#1E4FA8' } },
+              { text: '96.2', textStyle: { bold: true, color: '#1E4FA8' } },
+              { text: '93.6', textStyle: { bold: true, color: '#1E4FA8' } },
+            ],
+          ]}
+        />
+        <Box style={{ marginTop: 16, padding: '12px 18px', background: '#E8EFF8', borderLeft: '4px solid #1E4FA8' }}>
+          <Text style={{ fontSize: 16, color: '#1A2230', lineHeight: 1.5 }}>
+            不用语义先验，准确率反而比依赖 DINOv2 的 WildGS-SLAM 高 <span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>1.5 个百分点</span>。
+          </Text>
+        </Box>
+      </Box>
+
+      <Box style={{ flex: 1, flexDirection: 'column' }}>
+        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1A2230', marginBottom: 12 }}>图 2　平均 ATE RMSE 对比</Text>
+        <Box style={{ flexDirection: 'row', justifyContent: 'center' }}>
+          <Image src="assets/fig_traj.png" style={{ width: 470, height: 310, objectFit: 'contain' }} />
+        </Box>
+        <Text style={{ fontSize: 14, color: '#8B97A8', lineHeight: 1.5, marginTop: 8 }}>
+          数据取自论文表 6；横轴为对数刻度，量级差异达 47 倍。
+        </Text>
+      </Box>
+
+    </Box>
+
+  </Box>
+
+  <Box style={{ width: 1280, height: 50, paddingLeft: 60, paddingRight: 60, paddingTop: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>动态环境下视觉语言模型辅助三维高斯语义建图与机器人目标导航</Text>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>15 / 26</Text>
+  </Box>
+
+</Slide>

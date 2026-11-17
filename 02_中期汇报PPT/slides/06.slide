@@ -1,0 +1,84 @@
+<Slide style={{ width: 1280, height: 720, backgroundColor: '#FFFFFF', fontFamily: 'Microsoft YaHei', padding: 0, flexDirection: 'column' }}>
+
+  <Box style={{ width: 1280, height: 72, background: '#1E4FA8', paddingLeft: 60, paddingRight: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+      <Box style={{ width: 8, height: 36, background: '#3D7BD9' }} />
+      <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#FFFFFF' }}>研究空白：近一年 100 篇的能力矩阵</Text>
+    </Box>
+    <Text style={{ fontSize: 16, color: '#B9CCEA' }}>01 · Gap</Text>
+  </Box>
+
+  <Box style={{ width: 1280, height: 598, paddingLeft: 60, paddingRight: 60, paddingTop: 28, flexDirection: 'column' }}>
+
+    <Box style={{ height: 58, padding: '0px 20px', background: '#F7F9FC', borderLeft: '3px solid #3D7BD9', flexDirection: 'row', alignItems: 'center' }}>
+      <Text style={{ fontSize: 15, color: '#4A5568', lineHeight: 1.5 }}>
+        <span style={{ fontWeight: 'bold', color: '#1A2230' }}>检索口径　</span>arXiv API　35 组检索式　｜　submittedDate 2025-11-01 ~ 2026-11-16（严格，100 篇全部落窗内）　｜　去重候选 1845 篇 → 精选 100 篇　｜　PDF 全量入库 Zotero
+      </Text>
+    </Box>
+
+    <Box style={{ flexDirection: 'row', gap: 32, marginTop: 12, height: 420 }}>
+
+      <Box style={{ flex: 1, flexDirection: 'column', padding: '20px 24px', border: '1px solid #D6DCE5', borderTop: '3px solid #1E4FA8' }}>
+        <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1A2230', marginBottom: 4 }}>单能力覆盖</Text>
+        <Text style={{ fontSize: 14, color: '#8B97A8', marginBottom: 18 }}>100 篇中有多少篇具备该项能力</Text>
+
+        {[
+          { name: '有明确语义来源', v: 72, w: 230 },
+          { name: '3DGS 表示', v: 49, w: 157 },
+          { name: '有动态处理', v: 30, w: 96 },
+          { name: '目标导航类', v: 26, w: 83 },
+          { name: '真实机器人闭环', v: 6, w: 19 },
+        ].map((it, i) => (
+          <Box key={i} style={{ flexDirection: 'row', alignItems: 'center', height: 32, marginBottom: 9 }}>
+            <Text style={{ fontSize: 15, color: '#4A5568', width: 152 }}>{it.name}</Text>
+            <Box style={{ width: 230, height: 10, background: '#EDF1F7', flexDirection: 'row' }}>
+              <Box style={{ width: it.w, height: 10, background: '#1E4FA8' }} />
+            </Box>
+            <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1A2230', width: 56, textAlign: 'right' }}>{it.v}%</Text>
+          </Box>
+        ))}
+
+        <Text style={{ fontSize: 15, color: '#4A5568', lineHeight: 1.55, marginTop: 'auto', paddingTop: 6, borderTop: '1px solid #D6DCE5' }}>
+          语义已是共识，动态还没被认真对待：<span style={{ fontWeight: 'bold', color: '#1A2230' }}>72% 挂语义，仅 30% 处理动体</span>。
+        </Text>
+      </Box>
+
+      <Box style={{ flex: 1, flexDirection: 'column', padding: '20px 24px', border: '1px solid #D6DCE5', borderTop: '3px solid #1E4FA8' }}>
+        <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1A2230', marginBottom: 4 }}>交叉稀缺性</Text>
+        <Text style={{ fontSize: 14, color: '#8B97A8', marginBottom: 8 }}>能力叠加时篇数断崖式下降</Text>
+
+        {[
+          { name: '3DGS + 开放词汇语义', v: '28', pct: '28%', hi: false },
+          { name: '3DGS + 动态处理', v: '18', pct: '18%', hi: false },
+          { name: '再叠加动态处理', v: '5', pct: '5%', hi: false },
+          { name: '四者兼备', v: '0', pct: '0%', hi: true },
+        ].map((it, i) => (
+          <Box key={i} style={{ flexDirection: 'row', alignItems: 'center', height: 66, borderBottom: i < 3 ? '1px solid #D6DCE5' : 'none' }}>
+            <Text style={{ fontSize: 16, color: it.hi ? '#1A2230' : '#4A5568', fontWeight: it.hi ? 'bold' : 'normal', width: 268 }}>{it.name}</Text>
+            <Text style={{ fontSize: 34, fontWeight: 'bold', color: it.hi ? '#D9534F' : '#1E4FA8', width: 76, textAlign: 'right' }}>{it.v}</Text>
+            <Text style={{ fontSize: 14, color: '#8B97A8', width: 34, textAlign: 'right' }}>篇</Text>
+            <Text style={{ fontSize: 15, color: '#8B97A8', width: 72, textAlign: 'right' }}>{it.pct}</Text>
+          </Box>
+        ))}
+
+        <Text style={{ fontSize: 15, color: '#4A5568', lineHeight: 1.55, marginTop: 'auto', paddingTop: 10 }}>
+          自动统计判 2 篇四者兼备，<span style={{ fontWeight: 'bold', color: '#1A2230' }}>逐篇读摘要后全部推翻</span>——每篇都恰好缺两块。
+        </Text>
+      </Box>
+
+    </Box>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', marginTop: 12, padding: '12px 24px', background: '#E8EFF8', height: 68 }}>
+      <Text style={{ fontSize: 17, color: '#1A2230', lineHeight: 1.5 }}>
+        <span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>一句话结论　</span>空隙不在"语义建图"（已被 28 篇打满），而在<span style={{ fontWeight: 'bold', color: '#D9534F' }}>「动态 × 语义」的交叉</span>：动态社区把动体当噪声剔除、不问它是什么，语义社区默认场景静止。
+      </Text>
+    </Box>
+
+  </Box>
+
+  <Box style={{ width: 1280, height: 50, paddingLeft: 60, paddingRight: 60, paddingTop: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>动态环境下视觉语言模型辅助三维高斯语义建图与机器人目标导航</Text>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>6 / 26</Text>
+  </Box>
+
+</Slide>

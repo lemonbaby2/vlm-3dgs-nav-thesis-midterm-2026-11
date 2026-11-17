@@ -1,0 +1,165 @@
+{
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "iters": 250,
+ "init_points": 8000,
+ "resolution": [
+  320,
+  240
+ ],
+ "frames": 24,
+ "dataset": "analytic synthetic DYNAMIC (large: 24f 320x240 8000pt)",
+ "device": "cuda",
+ "stats": {
+  "naive": {
+   "psnr_all_mean": {
+    "mean": 20.529,
+    "std": 0.0728,
+    "vals": [
+     20.455,
+     20.628,
+     20.504
+    ]
+   },
+   "psnr_static_mean": {
+    "mean": 21.8197,
+    "std": 0.1481,
+    "vals": [
+     21.669,
+     22.021,
+     21.769
+    ]
+   },
+   "psnr_dyn_mean": {
+    "mean": 12.8217,
+    "std": 0.111,
+    "vals": [
+     12.926,
+     12.668,
+     12.871
+    ]
+   },
+   "ssim_mean": {
+    "mean": 0.8643,
+    "std": 0.001,
+    "vals": [
+     0.8657,
+     0.8634,
+     0.8638
+    ]
+   },
+   "ghost_residual_mean": {
+    "mean": 0.1335,
+    "std": 0.0024,
+    "vals": [
+     0.1344,
+     0.1302,
+     0.1358
+    ]
+   }
+  },
+  "dyn-mask": {
+   "psnr_all_mean": {
+    "mean": 20.6083,
+    "std": 0.0224,
+    "vals": [
+     20.639,
+     20.586,
+     20.6
+    ]
+   },
+   "psnr_static_mean": {
+    "mean": 30.071,
+    "std": 0.0257,
+    "vals": [
+     30.08,
+     30.036,
+     30.097
+    ]
+   },
+   "psnr_dyn_mean": {
+    "mean": 8.3363,
+    "std": 0.0034,
+    "vals": [
+     8.335,
+     8.341,
+     8.333
+    ]
+   },
+   "ssim_mean": {
+    "mean": 0.9115,
+    "std": 0.0001,
+    "vals": [
+     0.9116,
+     0.9116,
+     0.9114
+    ]
+   },
+   "ghost_residual_mean": {
+    "mean": 0.0082,
+    "std": 0.0003,
+    "vals": [
+     0.0084,
+     0.0084,
+     0.0077
+    ]
+   }
+  },
+  "no-dyn-data": {
+   "psnr_all_mean": {
+    "mean": 20.737,
+    "std": 0.0155,
+    "vals": [
+     20.758,
+     20.721,
+     20.732
+    ]
+   },
+   "psnr_static_mean": {
+    "mean": 29.578,
+    "std": 0.1133,
+    "vals": [
+     29.666,
+     29.418,
+     29.65
+    ]
+   },
+   "psnr_dyn_mean": {
+    "mean": 8.5233,
+    "std": 0.013,
+    "vals": [
+     8.51,
+     8.541,
+     8.519
+    ]
+   },
+   "ssim_mean": {
+    "mean": 0.9093,
+    "std": 0.0004,
+    "vals": [
+     0.9099,
+     0.909,
+     0.9089
+    ]
+   },
+   "ghost_residual_mean": {
+    "mean": 0.0139,
+    "std": 0.0005,
+    "vals": [
+     0.0133,
+     0.0146,
+     0.0139
+    ]
+   }
+  }
+ },
+ "checks": {
+  "C1_static_B>A": true,
+  "C2_ghost_B_lowest": true,
+  "C3_ghost_10x": true
+ },
+ "total_sec": 11830.1
+}

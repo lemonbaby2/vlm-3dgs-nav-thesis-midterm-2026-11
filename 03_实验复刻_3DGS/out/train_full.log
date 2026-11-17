@@ -1,0 +1,73 @@
+[data] 12 frames 160x120  device=cuda
+[gpu ] NVIDIA GeForce RTX 5060 Ti
+
+===== training config: naive =====
+[init] points=5000 scale0=0.05
+[naive] it     1/2500  loss 0.0712  psnr  16.29 dB  N=5000     0.5s
+[naive] it   150/2500  loss 0.0413  psnr  18.92 dB  N=5000    26.9s
+[naive] it   300/2500  loss 0.0335  psnr  20.00 dB  N=5000    53.4s
+[naive] it   450/2500  loss 0.0229  psnr  22.19 dB  N=5000    79.8s
+[naive] it   600/2500  loss 0.0213  psnr  22.12 dB  N=5000   106.3s
+[naive] it   750/2500  loss 0.0217  psnr  21.50 dB  N=5000   132.8s
+[naive] it   900/2500  loss 0.0225  psnr  21.09 dB  N=5000   159.3s
+[naive] it  1050/2500  loss 0.0212  psnr  21.45 dB  N=5000   185.7s
+[naive] it  1200/2500  loss 0.0175  psnr  22.18 dB  N=5000   212.2s
+[naive] it  1350/2500  loss 0.0190  psnr  21.55 dB  N=5000   238.7s
+[naive] it  1500/2500  loss 0.0196  psnr  22.25 dB  N=5000   265.1s
+[naive] it  1650/2500  loss 0.0190  psnr  21.78 dB  N=5000   291.6s
+[naive] it  1800/2500  loss 0.0191  psnr  22.52 dB  N=5000   318.1s
+[naive] it  1950/2500  loss 0.0198  psnr  22.01 dB  N=5000   344.5s
+[naive] it  2100/2500  loss 0.0180  psnr  22.05 dB  N=5000   371.0s
+[naive] it  2250/2500  loss 0.0182  psnr  22.43 dB  N=5000   397.5s
+[naive] it  2400/2500  loss 0.0157  psnr  22.60 dB  N=5000   424.0s
+[naive] AGG {"psnr_all_mean": 22.585, "psnr_static_mean": 30.777, "psnr_dyn_mean": 10.307, "ssim_mean": 0.9069, "ghost_residual_mean": 0.0816, "train_time_s": 441.46, "n_gauss": 5000, "frames_used": 12, "mode": "naive"}
+
+===== training config: dyn-mask =====
+[init] points=5000 scale0=0.05
+[dyn-mask] it     1/2500  loss 0.0392  psnr  18.40 dB  N=5000     0.2s
+[dyn-mask] it   150/2500  loss 0.0068  psnr  18.80 dB  N=5000    26.5s
+[dyn-mask] it   300/2500  loss 0.0039  psnr  20.12 dB  N=5000    53.0s
+[dyn-mask] it   450/2500  loss 0.0029  psnr  18.33 dB  N=5000    79.5s
+[dyn-mask] it   600/2500  loss 0.0026  psnr  18.34 dB  N=5000   106.0s
+[dyn-mask] it   750/2500  loss 0.0054  psnr  21.85 dB  N=5000   132.5s
+[dyn-mask] it   900/2500  loss 0.0028  psnr  20.15 dB  N=5000   159.0s
+[dyn-mask] it  1050/2500  loss 0.0021  psnr  19.12 dB  N=5000   185.5s
+[dyn-mask] it  1200/2500  loss 0.0055  psnr  21.22 dB  N=5000   211.9s
+[dyn-mask] it  1350/2500  loss 0.0020  psnr  18.34 dB  N=5000   238.4s
+[dyn-mask] it  1500/2500  loss 0.0057  psnr  23.09 dB  N=5000   264.9s
+[dyn-mask] it  1650/2500  loss 0.0026  psnr  18.97 dB  N=5000   291.4s
+[dyn-mask] it  1800/2500  loss 0.0021  psnr  18.98 dB  N=5000   317.9s
+[dyn-mask] it  1950/2500  loss 0.0044  psnr  21.82 dB  N=5000   344.3s
+[dyn-mask] it  2100/2500  loss 0.0033  psnr  22.27 dB  N=5000   370.8s
+[dyn-mask] it  2250/2500  loss 0.0020  psnr  18.97 dB  N=5000   397.3s
+[dyn-mask] it  2400/2500  loss 0.0047  psnr  23.17 dB  N=5000   423.8s
+[dyn-mask] AGG {"psnr_all_mean": 21.103, "psnr_static_mean": 34.351, "psnr_dyn_mean": 8.295, "ssim_mean": 0.9185, "ghost_residual_mean": 0.0048, "train_time_s": 441.28, "n_gauss": 5000, "frames_used": 12, "mode": "dyn-mask"}
+
+===== training config: no-dyn-data =====
+[init] points=5000 scale0=0.05
+[no-dyn-data] it     1/2500  loss 0.0493  psnr  18.42 dB  N=5000     0.2s
+[no-dyn-data] it   150/2500  loss 0.0333  psnr  18.82 dB  N=5000    26.5s
+[no-dyn-data] it   300/2500  loss 0.0231  psnr  20.45 dB  N=5000    53.0s
+[no-dyn-data] it   450/2500  loss 0.0322  psnr  18.58 dB  N=5000    79.4s
+[no-dyn-data] it   600/2500  loss 0.0318  psnr  18.59 dB  N=5000   105.9s
+[no-dyn-data] it   750/2500  loss 0.0183  psnr  21.93 dB  N=5000   132.3s
+[no-dyn-data] it   900/2500  loss 0.0217  psnr  20.63 dB  N=5000   158.8s
+[no-dyn-data] it  1050/2500  loss 0.0253  psnr  19.82 dB  N=5000   185.3s
+[no-dyn-data] it  1200/2500  loss 0.0188  psnr  21.86 dB  N=5000   211.7s
+[no-dyn-data] it  1350/2500  loss 0.0281  psnr  19.38 dB  N=5000   238.2s
+[no-dyn-data] it  1500/2500  loss 0.0160  psnr  22.83 dB  N=5000   264.6s
+[no-dyn-data] it  1650/2500  loss 0.0249  psnr  20.36 dB  N=5000   291.1s
+[no-dyn-data] it  1800/2500  loss 0.0233  psnr  20.73 dB  N=5000   317.5s
+[no-dyn-data] it  1950/2500  loss 0.0174  psnr  21.78 dB  N=5000   344.0s
+[no-dyn-data] it  2100/2500  loss 0.0167  psnr  22.70 dB  N=5000   370.4s
+[no-dyn-data] it  2250/2500  loss 0.0211  psnr  21.45 dB  N=5000   396.9s
+[no-dyn-data] it  2400/2500  loss 0.0155  psnr  22.85 dB  N=5000   423.4s
+[no-dyn-data] AGG {"psnr_all_mean": 22.271, "psnr_static_mean": 31.444, "psnr_dyn_mean": 9.937, "ssim_mean": 0.9077, "ghost_residual_mean": 0.0642, "train_time_s": 440.86, "n_gauss": 5000, "frames_used": 12, "mode": "no-dyn-data"}
+
+[done] metrics -> out/metrics.json
+
+| 配置 | PSNR(全图) | PSNR(静态区) | PSNR(动态区) | SSIM | 残影 | 高斯数 | 耗时(s) |
+|---|---|---|---|---|---|---|---|
+| naive | 22.585 | 30.777 | 10.307 | 0.9069 | 0.0816 | 5000 | 441.46 |
+| dyn-mask | 21.103 | 34.351 | 8.295 | 0.9185 | 0.0048 | 5000 | 441.28 |
+| no-dyn-data | 22.271 | 31.444 | 9.937 | 0.9077 | 0.0642 | 5000 | 440.86 |

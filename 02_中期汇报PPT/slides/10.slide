@@ -1,0 +1,64 @@
+<Slide style={{ width: 1280, height: 720, backgroundColor: '#FFFFFF', fontFamily: 'Microsoft YaHei', padding: 0, flexDirection: 'column' }}>
+
+  <Box style={{ width: 1280, height: 72, background: '#1E4FA8', paddingLeft: 60, paddingRight: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+      <Box style={{ width: 8, height: 36, background: '#3D7BD9' }} />
+      <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#FFFFFF' }}>内容一：贝叶斯概率融合动态掩码</Text>
+    </Box>
+    <Text style={{ fontSize: 16, color: '#B9CCEA' }}>02 · Method 01</Text>
+  </Box>
+
+  <Box style={{ width: 1280, height: 598, paddingLeft: 60, paddingRight: 60, paddingTop: 28, flexDirection: 'row', gap: 40 }}>
+
+    <Box style={{ width: 600, flexDirection: 'column' }}>
+      <Image src="assets/fig_pipeline.png" style={{ width: 600, height: 348, objectFit: 'contain' }} />
+      <Text style={{ fontSize: 14, color: '#8B97A8', lineHeight: 1.5, marginTop: 10 }}>
+        图 1　三支几何证据经贝叶斯后验融合生成像素级动态掩码，全程不使用预训练语义分割网络。
+      </Text>
+      <Box style={{ flexDirection: 'column', marginTop: 18, padding: '14px 20px', background: '#E8EFF8', borderLeft: '4px solid #1E4FA8' }}>
+        <Text style={{ fontSize: 17, color: '#1A2230', lineHeight: 1.55 }}>
+          设计取舍：放弃语义先验，换来对<span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>训练集外物体</span>的鲁棒性，代价是把判据从"是什么"换成"动没动"。
+        </Text>
+      </Box>
+    </Box>
+
+    <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'space-between' }}>
+
+      <Box style={{ flexDirection: 'column', borderLeft: '2px solid #3D7BD9', paddingLeft: 18 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E4FA8', marginBottom: 8 }}>证据一 · 运动残差</Text>
+        <Text style={{ fontSize: 18, color: '#4A5568', lineHeight: 1.55 }}>
+          RAFT 稠密光流给出像素位移场，再用稳健重投影残差剔除光流野值，得到"是否违反静态假设"的连续证据。
+        </Text>
+      </Box>
+
+      <Box style={{ flexDirection: 'column', borderLeft: '2px solid #3D7BD9', paddingLeft: 18 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E4FA8', marginBottom: 8 }}>证据二 · 几何一致性</Text>
+        <Text style={{ fontSize: 18, color: '#4A5568', lineHeight: 1.55 }}>
+          UniDepth 只给相对尺度，但与光流诱导的结构应保持一致。比较两帧深度经位姿变换后的偏差，得到与语义无关的几何证据。
+        </Text>
+      </Box>
+
+      <Box style={{ flexDirection: 'column', borderLeft: '2px solid #3D7BD9', paddingLeft: 18 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E4FA8', marginBottom: 8 }}>证据三 · 运动聚类</Text>
+        <Text style={{ fontSize: 18, color: '#4A5568', lineHeight: 1.55 }}>
+          把光流位移与深度差组成 6 维特征做 K-Means；同一刚体的像素落在同一簇，簇标签作为结构化先验抑制孤立误检。
+        </Text>
+      </Box>
+
+      <Box style={{ flexDirection: 'column', borderLeft: '2px solid #1E4FA8', paddingLeft: 18 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1A2230', marginBottom: 8 }}>后验融合</Text>
+        <Text style={{ fontSize: 18, color: '#4A5568', lineHeight: 1.55 }}>
+          三支证据在条件独立假设下对数似然相加，后验大于 0.5 判为动态。融合后 F1 由单支的 0.895 / 0.882 提升到 <span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>0.936</span>。
+        </Text>
+      </Box>
+
+    </Box>
+
+  </Box>
+
+  <Box style={{ width: 1280, height: 50, paddingLeft: 60, paddingRight: 60, paddingTop: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>动态环境下视觉语言模型辅助三维高斯语义建图与机器人目标导航</Text>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>10 / 26</Text>
+  </Box>
+
+</Slide>

@@ -1,0 +1,32 @@
+{
+ "seed": 2,
+ "configs": {
+  "naive": {
+   "psnr_all_mean": 20.504,
+   "psnr_static_mean": 21.769,
+   "psnr_dyn_mean": 12.871,
+   "ssim_mean": 0.8638,
+   "ghost_residual_mean": 0.1358,
+   "train_time_s": 553.4,
+   "n_gauss": 8000
+  },
+  "dyn-mask": {
+   "psnr_all_mean": 20.6,
+   "psnr_static_mean": 30.097,
+   "psnr_dyn_mean": 8.333,
+   "ssim_mean": 0.9114,
+   "ghost_residual_mean": 0.0077,
+   "train_time_s": 552.7,
+   "n_gauss": 8000
+  },
+  "no-dyn-data": {
+   "psnr_all_mean": 20.732,
+   "psnr_static_mean": 29.65,
+   "psnr_dyn_mean": 8.519,
+   "ssim_mean": 0.9089,
+   "ghost_residual_mean": 0.0139,
+   "train_time_s": 7461.8,
+   "n_gauss": 8000
+  }
+ }
+}

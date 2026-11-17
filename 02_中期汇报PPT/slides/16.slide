@@ -1,0 +1,106 @@
+<Slide style={{ width: 1280, height: 720, backgroundColor: '#FFFFFF', fontFamily: 'Microsoft YaHei', padding: 0, flexDirection: 'column' }}>
+
+  <Box style={{ width: 1280, height: 72, background: '#1E4FA8', paddingLeft: 60, paddingRight: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+      <Box style={{ width: 8, height: 36, background: '#3D7BD9' }} />
+      <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#FFFFFF' }}>渲染质量与实时性</Text>
+    </Box>
+    <Text style={{ fontSize: 16, color: '#B9CCEA' }}>03 · Result 02</Text>
+  </Box>
+
+  <Box style={{ width: 1280, height: 598, paddingLeft: 60, paddingRight: 60, paddingTop: 28, flexDirection: 'column' }}>
+
+    <Box style={{ flexDirection: 'row', gap: 32, height: 470 }}>
+
+      <Box style={{ width: 648, flexDirection: 'column' }}>
+        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1A2230', marginBottom: 12 }}>表 2　Replica 数据集 3D 高斯地图渲染质量</Text>
+        <Table
+          style={{ width: 648, height: 396 }}
+          defaultTextStyle={{ fontSize: 16, textAlign: 'center', color: '#1A2230' }}
+          defaultCellStyle={{
+            border: {
+              left: { width: 0, color: '#FFFFFF' },
+              right: { width: 0, color: '#FFFFFF' },
+              top: { width: 0, color: '#FFFFFF' },
+              bottom: { width: 1, color: '#E5E7EB' },
+            },
+            padding: 5,
+          }}
+          cells={[
+            [
+              { text: '方法', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+              { text: '输入', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+              { text: 'PSNR ↑', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+              { text: 'SSIM ↑', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+              { text: 'LPIPS ↓', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+              { text: 'FPS ↑', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+            ],
+            ['iMAP', 'RGB-D', '22.12', '0.752', '0.312', '<1'],
+            ['NICE-SLAM', 'RGB-D', '24.65', '0.810', '0.235', '<1'],
+            ['ESLAM', 'RGB-D', '28.41', '0.871', '0.148', '2'],
+            ['Point-SLAM', 'RGB-D', '28.95', '0.887', '0.124', '3'],
+            ['MonoGS', 'Mono', '32.80', '0.952', '0.055', '60'],
+            ['GS-SLAM', 'RGB-D', '33.45', '0.958', '0.048', '90'],
+            ['SplaTAM', 'RGB-D', '34.15', '0.965', '0.042', '100'],
+            [
+              { text: '本研究', textStyle: { bold: true, color: '#1E4FA8' } },
+              { text: 'Mono', textStyle: { bold: true, color: '#1E4FA8' } },
+              { text: '35.20', textStyle: { bold: true, color: '#1E4FA8' } },
+              { text: '0.971', textStyle: { bold: true, color: '#1E4FA8' } },
+              { text: '0.035', textStyle: { bold: true, color: '#1E4FA8' } },
+              { text: '118', textStyle: { bold: true, color: '#1E4FA8' } },
+            ],
+          ]}
+        />
+      </Box>
+
+      <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'space-between' }}>
+
+        <Box style={{ flexDirection: 'column', paddingLeft: 22, borderLeft: '3px solid #1E4FA8' }}>
+          <Box style={{ flexDirection: 'row', alignItems: 'baseline', gap: 6 }}>
+            <Text style={{ fontSize: 48, fontWeight: 'bold', color: '#1E4FA8', lineHeight: 1 }}>35.20</Text>
+            <Text style={{ fontSize: 18, color: '#1E4FA8' }}>dB</Text>
+          </Box>
+          <Text style={{ fontSize: 16, color: '#4A5568', marginTop: 8, lineHeight: 1.45 }}>PSNR，高于所有 RGB-D 方法</Text>
+        </Box>
+
+        <Box style={{ flexDirection: 'column', paddingLeft: 22, borderLeft: '3px solid #3D7BD9' }}>
+          <Box style={{ flexDirection: 'row', alignItems: 'baseline', gap: 6 }}>
+            <Text style={{ fontSize: 48, fontWeight: 'bold', color: '#1E4FA8', lineHeight: 1 }}>118</Text>
+            <Text style={{ fontSize: 18, color: '#1E4FA8' }}>FPS</Text>
+          </Box>
+          <Text style={{ fontSize: 16, color: '#4A5568', marginTop: 8, lineHeight: 1.45 }}>1080p 全分辨率渲染</Text>
+        </Box>
+
+        <Box style={{ flexDirection: 'column', paddingLeft: 22, borderLeft: '3px solid #3D7BD9' }}>
+          <Box style={{ flexDirection: 'row', alignItems: 'baseline', gap: 6 }}>
+            <Text style={{ fontSize: 48, fontWeight: 'bold', color: '#1E4FA8', lineHeight: 1 }}>35.7</Text>
+            <Text style={{ fontSize: 18, color: '#1E4FA8' }}>ms</Text>
+          </Box>
+          <Text style={{ fontSize: 16, color: '#4A5568', marginTop: 8, lineHeight: 1.45 }}>前端单帧跟踪耗时（28 Hz）</Text>
+        </Box>
+
+        <Box style={{ flexDirection: 'column', paddingLeft: 22, borderLeft: '3px solid #8B97A8' }}>
+          <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.5 }}>
+            测于 RTX 4090；前端与后端异步并行，跟踪帧率不受后端建图阻塞。
+          </Text>
+        </Box>
+
+      </Box>
+
+    </Box>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', marginTop: 24, padding: '12px 24px', background: '#E8EFF8', height: 76 }}>
+      <Text style={{ fontSize: 17, color: '#1A2230', lineHeight: 1.5 }}>
+        <span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>关键点　</span>表中只有本研究与 MonoGS 是纯单目输入，其余全部依赖 RGB-D；而本研究在输入更弱的前提下拿到最高 PSNR、最低 LPIPS 与最快渲染。
+      </Text>
+    </Box>
+
+  </Box>
+
+  <Box style={{ width: 1280, height: 50, paddingLeft: 60, paddingRight: 60, paddingTop: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>动态环境下视觉语言模型辅助三维高斯语义建图与机器人目标导航</Text>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>16 / 26</Text>
+  </Box>
+
+</Slide>

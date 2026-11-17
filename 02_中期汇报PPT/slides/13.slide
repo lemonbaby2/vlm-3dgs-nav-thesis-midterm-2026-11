@@ -1,0 +1,77 @@
+<Slide style={{ width: 1280, height: 720, backgroundColor: '#FFFFFF', fontFamily: 'Microsoft YaHei', padding: 0, flexDirection: 'column' }}>
+
+  <Box style={{ width: 1280, height: 72, background: '#1E4FA8', paddingLeft: 60, paddingRight: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+      <Box style={{ width: 8, height: 36, background: '#3D7BD9' }} />
+      <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#FFFFFF' }}>内容四：语义—几何目标导航闭环</Text>
+    </Box>
+    <Text style={{ fontSize: 16, color: '#B9CCEA' }}>02 · Method 04</Text>
+  </Box>
+
+  <Box style={{ width: 1280, height: 598, paddingLeft: 60, paddingRight: 60, paddingTop: 28, flexDirection: 'column' }}>
+
+    <Box style={{ flexDirection: 'row', gap: 12, height: 220 }}>
+
+      {[
+        { n: 'STEP 01', t: '指令解析', d: '把"去货架前拿蓝色料盒"拆成类别与空间关系，产出可查询条件' },
+        { n: 'STEP 02', t: '语义地图检索', d: '在语义高斯地图上做开放词汇检索，返回候选三维区域与置信度' },
+        { n: 'STEP 03', t: '目标点定型', d: '候选区做占据与可达性校验，取可行走前沿内的稳定落点' },
+        { n: 'STEP 04', t: '规划与执行', d: '前沿探索 + 局部轨迹规划，四足平台按度量坐标闭环执行' },
+        { n: 'STEP 05', t: '失败回收', d: '失败案例回灌标注，更新语义置信度与掩码阈值' },
+      ].map((it, i) => (
+        <Box key={i} style={{ flex: 1, flexDirection: 'column', padding: '18px 16px', border: '1px solid #D6DCE5', borderTop: i === 4 ? '3px solid #3D7BD9' : '3px solid #1E4FA8' }}>
+          <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#8B97A8', letterSpacing: 1, marginBottom: 8 }}>{it.n}</Text>
+          <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#1A2230', marginBottom: 8, lineHeight: 1.35 }}>{it.t}</Text>
+          <Text style={{ fontSize: 13, color: '#4A5568', lineHeight: 1.6 }}>{it.d}</Text>
+        </Box>
+      ))}
+
+    </Box>
+
+    <Box style={{ flexDirection: 'row', gap: 32, marginTop: 16, height: 240 }}>
+
+      <Box style={{ flex: 1, flexDirection: 'column', padding: '18px 24px', border: '1px solid #D6DCE5' }}>
+        <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#1A2230', marginBottom: 12 }}>与现有导航工作的差别</Text>
+        {[
+          { k: '表示', d: '26 篇导航工作仅 5 篇用 3DGS，多为 BEV / 语义栅格 / 场景图——渲染开销与策略频率不匹配。本课题把渲染与查询解耦。' },
+          { k: '动态', d: '20/26 篇静态假设；评测用的 HM3D / MP3D 本身是静态场景，动体不是评测项。' },
+        ].map((it, i) => (
+          <Box key={i} style={{ flexDirection: 'row', marginBottom: 8 }}>
+            <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1E4FA8', width: 44 }}>{it.k}</Text>
+            <Text style={{ flex: 1, fontSize: 15, color: '#4A5568', lineHeight: 1.55 }}>{it.d}</Text>
+          </Box>
+        ))}
+        <Text style={{ fontSize: 14, color: '#8B97A8', lineHeight: 1.55, marginTop: 'auto' }}>
+          另：26 篇中真机验证仅 5 篇，从 benchmark 到机器人之间还有明显的工程鸿沟。
+        </Text>
+      </Box>
+
+      <Box style={{ flex: 1, flexDirection: 'column', padding: '18px 24px', border: '1px solid #D6DCE5', borderLeft: '3px solid #1E4FA8' }}>
+        <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#1A2230', marginBottom: 12 }}>评测方案：不自建 benchmark</Text>
+        <Text style={{ fontSize: 15, color: '#4A5568', lineHeight: 1.6, marginBottom: 10 }}>
+          <span style={{ fontWeight: 'bold', color: '#1A2230' }}>基准　</span>复用 NavArena（2609.04602）与 HM3D-M3（2610.20121）的场景与评测管线，基准建设已被它们做完。
+        </Text>
+        <Text style={{ fontSize: 15, color: '#4A5568', lineHeight: 1.6, marginBottom: 10 }}>
+          <span style={{ fontWeight: 'bold', color: '#1A2230' }}>做法　</span>在其场景注入移动行人 / 叉车，构造动态扰动。
+        </Text>
+        <Text style={{ fontSize: 15, color: '#4A5568', lineHeight: 1.6 }}>
+          <span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>主指标　</span>动态条件下的成功率下降幅度，而非绝对成功率——这个维度目前没人做。
+        </Text>
+      </Box>
+
+    </Box>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', marginTop: 16, padding: '12px 24px', background: '#E8EFF8', height: 76 }}>
+      <Text style={{ fontSize: 17, color: '#1A2230', lineHeight: 1.5 }}>
+        <span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>当前状态　</span>方案完成，尚未实机。导航层的输入已由内容一至三备齐（度量尺度轨迹、干净高斯地图、可查询语义场），<span style={{ fontWeight: 'bold', color: '#1A2230' }}>剩余工作是接口打通与动态扰动下的评测</span>，排在 2028 年 1—3 月。
+      </Text>
+    </Box>
+
+  </Box>
+
+  <Box style={{ width: 1280, height: 50, paddingLeft: 60, paddingRight: 60, paddingTop: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>动态环境下视觉语言模型辅助三维高斯语义建图与机器人目标导航</Text>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>13 / 26</Text>
+  </Box>
+
+</Slide>

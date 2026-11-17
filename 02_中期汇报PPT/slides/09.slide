@@ -1,0 +1,86 @@
+<Slide style={{ width: 1280, height: 720, backgroundColor: '#FFFFFF', fontFamily: 'Microsoft YaHei', padding: 0, flexDirection: 'column' }}>
+
+  <Box style={{ width: 1280, height: 72, background: '#1E4FA8', paddingLeft: 60, paddingRight: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+      <Box style={{ width: 8, height: 36, background: '#3D7BD9' }} />
+      <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#FFFFFF' }}>四阶段技术路线</Text>
+    </Box>
+    <Text style={{ fontSize: 16, color: '#B9CCEA' }}>02 · Roadmap</Text>
+  </Box>
+
+  <Box style={{ width: 1280, height: 598, paddingLeft: 60, paddingRight: 60, paddingTop: 28, flexDirection: 'column' }}>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'stretch', height: 336 }}>
+
+      <Box style={{ flex: 1, flexDirection: 'column', padding: '20px 18px', border: '1px solid #D6DCE5', borderTop: '3px solid #1E4FA8' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1E4FA8', letterSpacing: 1, marginBottom: 8 }}>STAGE 01</Text>
+        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1A2230', lineHeight: 1.25, marginBottom: 14 }}>动态掩码生成</Text>
+        <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.75 }}>· RAFT 光流 → 运动残差<br />· UniDepth 单目深度 → 几何一致性残差<br />· 6D K-Means 运动聚类<br />· 贝叶斯后验融合</Text>
+        <Box style={{ marginTop: 'auto', paddingTop: 12, borderTop: '1px solid #D6DCE5' }}>
+          <Text style={{ fontSize: 15, color: '#1E4FA8', fontWeight: 'bold' }}>已实现并验证</Text>
+        </Box>
+      </Box>
+
+      <Box style={{ width: 40, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 24, color: '#3D7BD9' }}>›</Text>
+      </Box>
+
+      <Box style={{ flex: 1, flexDirection: 'column', padding: '20px 18px', border: '1px solid #D6DCE5', borderTop: '3px solid #1E4FA8' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1E4FA8', letterSpacing: 1, marginBottom: 8 }}>STAGE 02</Text>
+        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1A2230', lineHeight: 1.25, marginBottom: 14 }}>尺度感知跟踪</Text>
+        <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.75 }}>· 尺度因子 s 与 SE(3) 位姿同层优化<br />· 动态外点按后验概率降权<br />· 前端 30 Hz 实时跟踪<br />· 后端异步建图</Text>
+        <Box style={{ marginTop: 'auto', paddingTop: 12, borderTop: '1px solid #D6DCE5' }}>
+          <Text style={{ fontSize: 15, color: '#1E4FA8', fontWeight: 'bold' }}>已实现并验证</Text>
+        </Box>
+      </Box>
+
+      <Box style={{ width: 40, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 24, color: '#3D7BD9' }}>›</Text>
+      </Box>
+
+      <Box style={{ flex: 1, flexDirection: 'column', padding: '20px 18px', border: '1px solid #D6DCE5', borderTop: '3px solid #1E4FA8' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1E4FA8', letterSpacing: 1, marginBottom: 8 }}>STAGE 03</Text>
+        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1A2230', lineHeight: 1.25, marginBottom: 14 }}>动态感知高斯映射</Text>
+        <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.75 }}>· 掩码加权渲染损失<br />· 高斯生命周期：初始化滤波 / 增密 / 剪枝<br />· 关键帧触发后端优化<br />· 保持地图纯净性</Text>
+        <Box style={{ marginTop: 'auto', paddingTop: 12, borderTop: '1px solid #D6DCE5' }}>
+          <Text style={{ fontSize: 15, color: '#1E4FA8', fontWeight: 'bold' }}>已实现并验证</Text>
+        </Box>
+      </Box>
+
+      <Box style={{ width: 40, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 24, color: '#3D7BD9' }}>›</Text>
+      </Box>
+
+      <Box style={{ flex: 1, flexDirection: 'column', padding: '20px 18px', border: '1px solid #D6DCE5', borderTop: '3px solid #8B97A8', background: '#F7F9FC' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#8B97A8', letterSpacing: 1, marginBottom: 8 }}>STAGE 04</Text>
+        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1A2230', lineHeight: 1.25, marginBottom: 14 }}>语义—几何联合导航</Text>
+        <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.75 }}>· CLIP 特征挂载 + 码本压缩<br />· 文本查询 → 三维目标点<br />· 前沿探索 + 局部轨迹规划<br />· 四足平台实机验证</Text>
+        <Box style={{ marginTop: 'auto', paddingTop: 12, borderTop: '1px solid #D6DCE5' }}>
+          <Text style={{ fontSize: 15, color: '#8B97A8', fontWeight: 'bold' }}>方案完成 / 部分实现</Text>
+        </Box>
+      </Box>
+
+    </Box>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', marginTop: 26, padding: '12px 24px', background: '#E8EFF8', height: 64 }}>
+      <Text style={{ fontSize: 17, color: '#1A2230', lineHeight: 1.5 }}>
+        <span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>阶段输出　</span>像素级动态掩码 → 度量尺度轨迹 → 干净 3DGS 地图 → 可查询语义地图与导航目标点
+      </Text>
+    </Box>
+
+    <Box style={{ flexDirection: 'row', marginTop: 20, height: 88 }}>
+      <Box style={{ flexDirection: 'column', paddingLeft: 18, borderLeft: '2px dashed #3D7BD9' }}>
+        <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.6 }}>
+          <span style={{ fontWeight: 'bold', color: '#1A2230' }}>闭环关系　</span>阶段 3 的地图质量指标（PSNR / SSIM / 残影）反向约束阶段 1 的掩码阈值与阶段 2 的尺度先验；阶段 4 的导航失败案例回收为训练与标注样本。
+        </Text>
+      </Box>
+    </Box>
+
+  </Box>
+
+  <Box style={{ width: 1280, height: 50, paddingLeft: 60, paddingRight: 60, paddingTop: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>动态环境下视觉语言模型辅助三维高斯语义建图与机器人目标导航</Text>
+    <Text style={{ fontSize: 14, color: '#8B97A8' }}>9 / 26</Text>
+  </Box>
+
+</Slide>
